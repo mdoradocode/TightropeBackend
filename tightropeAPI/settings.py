@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'eventApp.apps.EventappConfig',
+    'predictApp.apps.PredictappConfig',
     'accounts.apps.AccountsConfig',
     'public.apps.PublicConfig',
     'rest_framework',
