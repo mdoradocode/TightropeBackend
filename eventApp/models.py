@@ -4,9 +4,12 @@ from django.db import models
 
 class Events(models.Model):
     EventID = models.AutoField(primary_key=True)
-    UserID = models.CharField(max_length=25)
-    EventName = models.CharField(max_length=50)
+    UserEmail = models.CharField(max_length=25)
+    EventName = models.CharField(max_length=25)
     StartDate = models.DateTimeField()
     EndDate = models.DateTimeField()
-    Description = models.CharField(max_length=100)
-    Lesiure = models.BooleanField()
+    Location = models.CharField(max_length=25)
+    Leisure = models.BooleanField()
+    StressLevel = models.IntegerField()
+    Notes = models.CharField(max_length=100)
+    
