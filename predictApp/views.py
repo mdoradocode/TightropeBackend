@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
 from predictApp.algorithmic_base import predict_stress
+from predictApp.most_stressful_day import most_stressful_day_calculator
 
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
@@ -46,3 +47,11 @@ def predictAPI(request,id=0):
         events.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)
     
+@csrf_exempt
+def stressful_day(request,id=0):
+    if request.method=="GET":
+        events = Events.objects.all()
+        events_serializer = EventsSerializer(events, many=True)
+        print("executing code")
+        most_stressful_day_calculator(events_serializer.data)
+        return JsonResponse("Stressful Day!", safe=False)
