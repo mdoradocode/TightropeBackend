@@ -26,9 +26,9 @@ def predict_stress(events, surveydata):
     stress_events = []
     leisure_events = []
     for event in events:
-        if event['Lesiure'] == False:
+        if event['Leisure'] == False:
             stress_events.append(event)
-        elif event['Lesiure'] == True:
+        elif event['Leisure'] == True:
             leisure_events.append(event)
 
     # Get total number of stressful and leisure events 
