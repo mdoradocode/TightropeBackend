@@ -21,6 +21,8 @@ def eventsAPI(request,id=0):
     elif request.method=='POST':
         events_data = JSONParser().parse(request)
         events_serializer = EventsSerializer(data=events_data)
+        events_serializer.is_valid()
+        print(events_serializer.errors)
         if events_serializer.is_valid():
             events_serializer.save()
             return JsonResponse("Added event!", safe=False)
