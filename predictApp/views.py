@@ -4,12 +4,11 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
-from algorithmic_base import predict_stress
+from predictApp.algorithmic_base import predict_stress
 
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
 
-import algorithmic_base
 
 
 # Create your views here.
@@ -21,7 +20,7 @@ def predictAPI(request,id=0):
         events_serializer = EventsSerializer(events, many=True)
         stress_value = predict_stress(events_serializer.data, surveydata = 0)
         #   I don't know if this is going to work. I might have to make a stress-prediction class and return that, but we will try.
-        return JsonResponse(stress_value)
+        return JsonResponse(str(stress_value), safe=False)
 
     #Add a record
     elif request.method=='POST':

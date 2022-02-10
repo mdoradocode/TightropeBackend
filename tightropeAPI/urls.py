@@ -22,5 +22,6 @@ urlpatterns = [
     path('team12adminaccess/', admin.site.urls),
     path('accounts/',include('accounts.urls')),
     path('api/auth/', include('rest_framework.urls')),
-    re_path(r'', include('eventApp.urls'))
+    re_path(r'', include('eventApp.urls')),
+    re_path(r'', include('predictApp.urls'))
 ]
