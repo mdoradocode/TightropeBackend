@@ -37,6 +37,6 @@ class CustomAuthToken(ObtainAuthToken):
             'user_id': user.pk,
             'email': user.email,
             'user': user.user,
-            'userFirstName': request.user.first_name,
-            'userLastName': request.user.last_name
+            'userFirstName': user.first_name,
+            'userLastName': user.last_name
         })
