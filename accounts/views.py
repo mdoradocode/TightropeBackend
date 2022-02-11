@@ -16,6 +16,10 @@ class ProfileView(APIView):
         content = {
             'user email': str(request.user.email),  # `django.contrib.auth.User` instance.
             'user': str(request.user), 
+            'userFirstName': str(request.user.first_name),
+            'userLastName': str(request.user.last_name),
+            #returns hased password, not useful for our needs
+            #'password': str(request.user.password),
             'auth': str(request.auth),  # None
         }
         return Response(content)
@@ -31,5 +35,8 @@ class CustomAuthToken(ObtainAuthToken):
         return Response({
             'token': token.key,
             'user_id': user.pk,
-            'email': user.email
+            'email': user.email,
+            'user': user.user,
+            'userFirstName': str(request.user.first_name),
+            'userLastName': str(request.user.last_name)
         })
