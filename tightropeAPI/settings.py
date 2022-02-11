@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-w03ds62l%0plo(bzavqrc$sf%za_k(^keiht1s!$mss8w&mj4c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'tightropeapi.herokuapp.com','tightropeapp.heroku.com']
+ALLOWED_HOSTS = ['127.0.0.1','localhost', 'tightropeapi.herokuapp.com','tightropeapp.heroku.com']
 
 
 # Application definition
