@@ -3,10 +3,16 @@ from django.urls import path
 from predictApp import views
 
 urlpatterns=[
-    #This gets the user's stress level prediction
+    #This gets the overall stress level prediction. Not useful, but interesting :)
     path(r'predict/',views.predictAPI),
     #if the request has an id attached (it will) also route it to the API
-    path(r'predict/<int:id>',views.predictAPI),
+    path(r'predict/<str:useremail>',views.predictAPI),
     #returns the most stressful day
-    path(r'stressday/',views.stressful_day)
+    path(r'stressday/<str:useremail>',views.stressful_day),
+    #returns the work time
+    path(r'worktime/<str:useremail>',views.worktime),
+    #returns completed leisures, total leisures
+    path(r'leisurecalculator/<str:useremail>',views.leisure_calculator),
+    #returns the stress count
+    path(r'stresscounter/<str:useremail>',views.stress_counter_view),
 ]

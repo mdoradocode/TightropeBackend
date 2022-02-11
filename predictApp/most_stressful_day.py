@@ -9,7 +9,6 @@ import datetime
 def most_stressful_day_calculator(events):
     # from https://stackoverflow.com/questions/18200530/get-the-last-sunday-and-saturdays-date-in-python
     #   calculates the previous sunday, aka our start date
-    print("TEST ")
     today = datetime.date.today()
     idx = (today.weekday() + 1) % 7
     sun = today - datetime.timedelta(idx)
@@ -18,11 +17,8 @@ def most_stressful_day_calculator(events):
     #   get the eligible dates
     eligible_dates = []
     for event in events:
-        print(sat)
-        print(event["StartDate"])
-        print(type(event["StartDate"]))
-        print(event["StartDate"].date())
-        if event["StartDate"].date() < sat and event["StartDate"].date() > sun and event["Lesiure"] == False:
+        start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
+        if start_date < sat and start_date > sun and event["Leisure"] == False:
             print("Got into the loop!")
             eligible_dates.append(event)
     print("Found Eligible Dates")
@@ -36,10 +32,12 @@ def most_stressful_day_calculator(events):
     #   count the stressful events in each day
     stress_count = [0] * 7
     for i in eligible_dates:
+        start_date = datetime.datetime.strptime(i["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
         for j in range(len(dateArray)):
-            if i["StartDate"] == dateArray[j]:
-                stress_count[j] += 1
+            start_date = datetime.datetime.strptime(i["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
+            if start_date == dateArray[j]:
+                stress_count[j] += i["StressLevel"]
 
-    print(stress_count)
-    print(max(stress_count))
-
+    #   find the day(s) with the maximum stress level
+    max_days = [i for i, x in enumerate(stress_count) if x == max(stress_count)]
+    return max_days
