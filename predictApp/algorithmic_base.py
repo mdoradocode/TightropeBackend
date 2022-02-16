@@ -16,6 +16,8 @@
 
 """
 
+import datetime
+
 #   Define Hyperparameters
 max_stress_report = 3
 leisure_event_weight = .5
@@ -23,13 +25,29 @@ survey_weight =  1
 
 
 def predict_stress(events, surveydata):
+
+    #   Get events this week
+    today = datetime.date.today()
+    idx = (today.weekday() + 1) % 7
+    sun = today - datetime.timedelta(idx)
+    sat = sun + datetime.timedelta(6)
+
+    #   Categorize events
     stress_events = []
     leisure_events = []
     for event in events:
-        if event['Leisure'] == False:
+        print("ITERATION: ", event)
+        start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
+        if start_date < sat and start_date > sun and event['Leisure'] == False:
+            print("ADDED STRESS EVENT")
             stress_events.append(event)
-        elif event['Leisure'] == True:
+        elif start_date < sat and start_date > sun and event['Leisure'] == True:
+            print("ADDED LEISURE EVENT")
             leisure_events.append(event)
+
+    #   Failsafe in case there are no events this week:
+    if len(stress_events) == 0:
+        return 0
 
     # Get total number of stressful and leisure events 
     stress_total = len(stress_events)

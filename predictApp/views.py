@@ -10,6 +10,7 @@ from predictApp.most_stressful_day import most_stressful_day_calculator
 from predictApp.work_time import work_time_calculator
 from predictApp.leisure_completed import leisure_completed_calculator
 from predictApp.stress_counter import stress_counter
+from predictApp.ticketed_recommendation import ticketed_recommendation_finder
 
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
@@ -63,3 +64,12 @@ def stress_counter_view(request, useremail=""):
         events_serializer = EventsSerializer(events, many=True)
         stress_count = stress_counter(events_serializer.data)
         return JsonResponse(stress_count, safe=False)
+
+@csrf_exempt
+def local_event_recommendations(request, useremail=""):
+    if request.method=="GET":
+        events = Events.objects.filter(UserEmail=useremail)
+        events_serializer = EventsSerializer(events, many=True)
+        print("GOT HERE")
+        local_events = ticketed_recommendation_finder(events_serializer.data)
+        return JsonResponse(local_events, safe=False)

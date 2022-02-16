@@ -13,21 +13,17 @@ def most_stressful_day_calculator(events):
     idx = (today.weekday() + 1) % 7
     sun = today - datetime.timedelta(idx)
     sat = sun + datetime.timedelta(6)
-    print("Found Sunday")
     #   get the eligible dates
     eligible_dates = []
     for event in events:
         start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
         if start_date < sat and start_date > sun and event["Leisure"] == False:
-            print("Got into the loop!")
             eligible_dates.append(event)
-    print("Found Eligible Dates")
     #   set up each date
     dateArray = [sun] * 7
     for i in range(len(dateArray)):
         if i == 0: continue
         dateArray[i] = dateArray[i-1] + datetime.timedelta(1)
-    print(dateArray)
     
     #   count the stressful events in each day
     stress_count = [0] * 7

@@ -20,11 +20,11 @@ This was built by Cooper Flourens
 """
 
 import ticketpy
-import config
+import predictApp.config
 from datetime import datetime
 from datetime import timedelta
 
-def find_events(categories = '', city='Reno'):
+def find_events(categories = '', city='Reno',  startDate = datetime.now().date(), endDate = datetime.now().date() + timedelta(days=7)):
 
     """
     Usage: find_events(categories = '{categories list}', city='{city name}')
@@ -36,25 +36,20 @@ def find_events(categories = '', city='Reno'):
     """
 
     # Set up essential variables
-    currentDate = datetime.now()
-    endDate = datetime.now() + timedelta(days=8)
-    currentDate = currentDate.strftime("%Y-%m-%dT%H:%M:%SZ")
+    startDate = startDate.strftime("%Y-%m-%dT%H:%M:%SZ")
     endDate = endDate.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    tm_client = ticketpy.ApiClient(config.ticketmaster_api_key)
-    
+    tm_client = ticketpy.ApiClient(predictApp.config.ticketmaster_api_key)
 
     pages = tm_client.events.find(
         classification_name=categories,
         city=city,
-        start_date_time=currentDate,
+        start_date_time=startDate,
         end_date_time=endDate
     )
-
+    events = []
     for page in pages:
         for event in page:
-            print(event.name)
-            print(event.local_start_time)
-    return pages
+            events.append(event.json)
 
-find_events()
+    return events

@@ -15,32 +15,41 @@
 
 import datetime
 import calendar
+import predictApp.webscraper
 
 #   this is the id of start_time in the calendar
-START_TIME_ID = 'startTime'
+START_TIME_ID = 'StartDate'
 
 # id of end_time in an event
-END_TIME_ID = 'endTime'
+END_TIME_ID = 'EndDate'
 
 # threshold for event recommendations
 TIME_THRESHOLD = datetime.timedelta(hours=1)
 
 
-def ticketed_recommendation_finder(calendar, categories):
+def ticketed_recommendation_finder(calendar, categories = ""):
     #   only keep events that are in the next week
-    calendar = {key: value for key, value in calendar.items() if value.start_time.date() <= datetime.datetime.now().date() + datetime.timedelta(days=7)}
-    
-    #   sort the events by start time THIS MIGHT HAVE TO HAVE ALREADY BEEN DONE IF WE'RE ONLY GETTING THE WEEKS WORTH 
-    dict(sorted(calendar.items(), key=lambda item: item[START_TIME_ID]))
-
-    # find the last event on a given day
-    previous_event = None
+    currentDate = datetime.datetime.now().date()
+    endDate = datetime.datetime.now().date() + datetime.timedelta(days=7)
+    day_array = []
+    event_array_by_date = [[] for i in range(7) ]
+    for i in range(7):
+        day_array.append(currentDate + datetime.timedelta(days=i))
     for event in calendar:
-        if event.id != 1: 
-            #checks to see if previous_event is the last on that date.
-            if event.start_time.date() != previous_event.start_time.date():
-                
-                return
-        previous_event = event
+        for day in day_array:
+            start_time = datetime.datetime.strptime(event[START_TIME_ID], "%Y-%m-%dT%H:%M:%SZ")
+            if start_time.date() == day:
+                event_array_by_date[day_array.index(day)].append(event)
 
-            
+    recommended_events = []
+    for idx, day in enumerate(event_array_by_date):
+        date = currentDate + datetime.timedelta(days=idx)
+        end_time = datetime.datetime.combine(date, datetime.time(hour=0, minute=0, second=0))
+        end_of_search = datetime.datetime.combine(date+datetime.timedelta(days=1), datetime.time(hour=4, minute=59, second=59))
+        for event in day:
+            event_end_time = datetime.datetime.strptime(event[START_TIME_ID], "%Y-%m-%dT%H:%M:%SZ")
+            if event_end_time > end_time:
+                end_time = event_end_time
+        recommended_events.append(predictApp.webscraper.find_events(categories = categories, startDate = end_time, endDate=end_of_search))
+
+    return recommended_events

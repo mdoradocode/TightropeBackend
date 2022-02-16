@@ -15,4 +15,6 @@ urlpatterns=[
     path(r'leisurecalculator/<str:useremail>',views.leisure_calculator),
     #returns the stress count
     path(r'stresscounter/<str:useremail>',views.stress_counter_view),
+    #returns the ticketed recommendation
+    path(r'localevents/<str:useremail>',views.local_event_recommendations)
 ]
