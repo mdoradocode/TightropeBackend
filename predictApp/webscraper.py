@@ -20,6 +20,7 @@ This was built by Cooper Flourens
 """
 
 import ticketpy
+import os
 from datetime import datetime
 from datetime import timedelta
 from boto.s3.connection import S3Connection
