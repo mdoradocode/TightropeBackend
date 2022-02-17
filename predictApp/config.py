@@ -1,3 +1,5 @@
 #Ticketmaster API Keys
-ticketmaster_api_key = "dpffBCJurjKsU2MGMshICDYFMXLEbl9d"
-ticketmaster_secret_key = "16OzXMilxrP3uyIb"
+from boto.s3.connection import S3Connection
+
+TICKETMASTER_API_KEY = S3Connection(os.environ['TICKETMASTER_API_KEY'])
+TICKETMASTER_SECRET_KEY = S3Connection(os.environ['TICKETMASTER_SECRET_KEY'])
