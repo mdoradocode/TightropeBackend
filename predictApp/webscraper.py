@@ -23,10 +23,9 @@ import ticketpy
 import os
 from datetime import datetime
 from datetime import timedelta
-from boto.s3.connection import S3Connection
 
-TICKETMASTER_API_KEY = S3Connection(os.environ['TICKETMASTER_API_KEY'])
-TICKETMASTER_SECRET_KEY = S3Connection(os.environ['TICKETMASTER_SECRET_KEY'])
+TICKETMASTER_API_KEY = os.environ['TICKETMASTER_API_KEY']
+TICKETMASTER_SECRET_KEY = os.environ['TICKETMASTER_SECRET_KEY']
 
 def find_events(categories = '', city='Reno',  startDate = datetime.now().date(), endDate = datetime.now().date() + timedelta(days=7)):
 
