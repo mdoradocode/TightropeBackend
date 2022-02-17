@@ -70,6 +70,5 @@ def local_event_recommendations(request, useremail=""):
     if request.method=="GET":
         events = Events.objects.filter(UserEmail=useremail)
         events_serializer = EventsSerializer(events, many=True)
-        print("GOT HERE")
         local_events = ticketed_recommendation_finder(events_serializer.data)
         return JsonResponse(local_events, safe=False)
