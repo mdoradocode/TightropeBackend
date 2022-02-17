@@ -15,6 +15,7 @@
 
 import datetime
 import calendar
+import time
 import predictApp.webscraper
 
 #   this is the id of start_time in the calendar
@@ -51,5 +52,6 @@ def ticketed_recommendation_finder(calendar, categories = ""):
             if event_end_time > end_time:
                 end_time = event_end_time
         recommended_events.append(predictApp.webscraper.find_events(categories = categories, startDate = end_time, endDate=end_of_search))
+        time.sleep(1)
 
     return recommended_events
