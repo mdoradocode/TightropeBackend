@@ -9,7 +9,7 @@ class Events(models.Model):
     StartDate = models.DateTimeField()
     EndDate = models.DateTimeField()
     Location = models.CharField(max_length=25)
-    Leisure = models.BooleanField()
+    EventType = models.IntegerField()
     StressLevel = models.IntegerField()
     Notes = models.CharField(max_length=100)
     
