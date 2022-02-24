@@ -10,7 +10,7 @@ class EventsSerializer(serializers.ModelSerializer):
                     'StartDate',
                     'EndDate',
                     'Location',
-                    'Leisure',
+                    'EventType',
                     'StressLevel',
                     'Notes')
 

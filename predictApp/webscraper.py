@@ -25,12 +25,12 @@ from datetime import datetime
 from datetime import timedelta
 
 #Use the following lines whenever pushing to the Git
-TICKETMASTER_API_KEY = os.environ['TICKETMASTER_API_KEY']
-TICKETMASTER_SECRET_KEY = os.environ['TICKETMASTER_SECRET_KEY']
+#TICKETMASTER_API_KEY = os.environ['TICKETMASTER_API_KEY']
+#TICKETMASTER_SECRET_KEY = os.environ['TICKETMASTER_SECRET_KEY']
 
 #Use the following lines for local development
-#TICKETMASTER_API_KEY = 'dpffBCJurjKsU2MGMshICDYFMXLEbl9d'
-#TICKETMASTER_SECRET_KEY='16OzXMilxrP3uyIb'
+TICKETMASTER_API_KEY = 'dpffBCJurjKsU2MGMshICDYFMXLEbl9d'
+TICKETMASTER_SECRET_KEY='16OzXMilxrP3uyIb'
 
 def find_events(categories = '', city='Reno',  startDate = datetime.now().date(), endDate = datetime.now().date() + timedelta(days=7)):
 
