@@ -13,3 +13,8 @@ class Events(models.Model):
     StressLevel = models.IntegerField()
     Notes = models.CharField(max_length=100)
     
+class MindfulnessEvents(models.Model):
+    MindfulnessEventID = models.AutoField(primary_key=True)
+    MindfulnessEventName = models.CharField(max_length=50)
+    MindfulnessEventDuration = models.IntegerField()
+    MindfulnessEventNotes = models.CharField(max_length=300)
