@@ -21,3 +21,10 @@ class MindfulnessEventsSerializer(serializers.ModelSerializer):
                     'MindfulnessEventName',
                     'MindfulnessEventDuration',
                     'MindfulnessEventNotes')
+
+class UserPreferencesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserPreferences
+        fields = ('UserPreferenceID',
+                    'UserEmail',
+                    'UserPreference')

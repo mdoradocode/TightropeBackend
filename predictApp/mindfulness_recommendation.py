@@ -28,19 +28,21 @@
 import datetime
 import calendar
 
+from eventApp.models import UserPreferences
+
 # Hyperparameters
 
 #   this is the id of start_time in the calendar
-START_TIME_ID = 'startTime'
+START_TIME_ID = 'StartDate'
 
 # id of end_time in an event
-END_TIME_ID = 'endTime'
+END_TIME_ID = 'EndDate'
 
 # threshold for event recommendations
 TIME_THRESHOLD = datetime.timedelta(hours=1)
 
 #   length of leisure event id
-PREFERRED_EVENT_LENGTH = "length"
+PREFERRED_EVENT_LENGTH = "MindfulnessEventDuration"
 
 
 
@@ -68,7 +70,17 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
                 for preferred_event in event_preferences:
                     if preferred_event[PREFERRED_EVENT_LENGTH] < length_of_event:
                         #   if so, return the event, and recommend the time
-                        return preferred_event, time_for_event
+                        recommended_event = {
+                            "UserEmail": event["UserEmail"],
+                            "EventName": preferred_event["UserPreference"],
+                            "StartDate": time_for_event,
+                            "EndDate": time_for_event + datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH]),
+                            "Location": "",
+                            "EventType": 0,
+                            "StressLevel": 0,
+                            "Notes": preferred_event["MindfulnessEventNotes"]
+                        }
+                        return recommended_event
                         #   note, we may want to package this information into an event object and return that as a calendar event, where:
                             #   event.name = preferred_event["name"]
                             #   event.start_time = time_for_event

@@ -36,4 +36,21 @@ def most_stressful_day_calculator(events):
 
     #   find the day(s) with the maximum stress level
     max_days = [i for i, x in enumerate(stress_count) if x == max(stress_count)]
-    return max_days
+    stressful_days = []
+    for i in max_days:
+        if i == 0:
+            stressful_days.append("Sunday")
+        elif i == 1:
+            stressful_days.append("Monday")
+        elif i == 2:
+            stressful_days.append("Tuesday")
+        elif i == 3:
+            stressful_days.append("Wednesday")
+        elif i == 4:
+            stressful_days.append("Thursday")
+        elif i == 5:
+            stressful_days.append("Friday")
+        elif i == 6:
+            stressful_days.append("Saturday")
+        
+    return stressful_days

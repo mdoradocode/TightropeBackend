@@ -11,5 +11,8 @@ urlpatterns=[
     #Route requests with the event tag on them to the events api
     path(r'mindfulnessevents/',views.mindfulnesseventsAPI),
     #if the request has an UserEmail attached (it will) also route it to the API
-    path(r'mindfulnessevents/<str:useremail>',views.mindfulnesseventsAPI)
+    path(r'mindfulnessevents/<str:useremail>',views.mindfulnesseventsAPI),
+
+    #User Preference Manipulation
+    path(r'mindfulpreference/<str:useremail>',views.userMindfulnessPreferences)
 ]

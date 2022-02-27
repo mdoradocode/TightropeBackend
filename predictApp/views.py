@@ -11,6 +11,7 @@ from predictApp.work_time import work_time_calculator
 from predictApp.leisure_completed import leisure_completed_calculator
 from predictApp.stress_counter import stress_counter
 from predictApp.ticketed_recommendation import ticketed_recommendation_finder
+from predictApp.mindfulness_recommendation import mindfulness_recommendation_finder
 
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
@@ -72,3 +73,14 @@ def local_event_recommendations(request, useremail=""):
         events_serializer = EventsSerializer(events, many=True)
         local_events = ticketed_recommendation_finder(events_serializer.data)
         return JsonResponse(local_events, safe=False)
+
+@csrf_exempt
+def mindfulness_event_recommendations(request, useremail=""):
+    if request.method=='GET':
+        events = Events.objects.filter(UserEmail=useremail)
+        events_serializer = EventsSerializer(events, many=True)
+        event_preferences = UserPreferences.objects.filter(UserEmail=useremail)
+        event_preferences_serializer = UserPreferencesSerializer(event_preferences, many=True)
+        recommendation = mindfulness_recommendation_finder(events_serializer.data, event_preferences_serializer.data)
+        serialized_recommendation = EventsSerializer(recommendation)
+        return JsonResponse(serialized_recommendation.data,safe=False)
