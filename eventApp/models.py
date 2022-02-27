@@ -18,3 +18,9 @@ class MindfulnessEvents(models.Model):
     MindfulnessEventName = models.CharField(max_length=50)
     MindfulnessEventDuration = models.IntegerField()
     MindfulnessEventNotes = models.CharField(max_length=300)
+
+class userPrefMindEvents(models.Model):
+    userMindEventID = models.AutoField(primary_key=True)
+    UserEmail = models.CharField(max_length=25)
+    eventpref = models.CharField(max_length=50)
+    

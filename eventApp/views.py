@@ -45,8 +45,7 @@ def eventsAPI(request,useremail=""):
     #Find and delete a record by passing a full JSON request, that includes all information for the event INCLUDING the EventID within the request
     #Example: https://tightropeapi.herokuapp.com/events/
     elif request.method=='DELETE':
-        events_data = JSONParser().parse(request)
-        events=Events.objects.get(EventID=events_data['EventID'])
+        events=Events.objects.get(EventID=useremail)
         events.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)
     
