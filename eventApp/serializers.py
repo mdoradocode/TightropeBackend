@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from eventApp.models import Events, MindfulnessEvents
+from eventApp.models import Events, MindfulnessEvents, UserPreferences
 
 class EventsSerializer(serializers.ModelSerializer):
     class Meta:
