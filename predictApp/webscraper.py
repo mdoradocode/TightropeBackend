@@ -58,6 +58,17 @@ def find_events(categories = '', city='Reno',  startDate = datetime.now().date()
     events = []
     for page in pages:
         for event in page:
-            events.append(event.json)
+            start_time = datetime.strptime(event.local_start_date + "T" + event.local_start_time + "Z", "%Y-%m-%dT%H:%M:%SZ")
+            end_time = start_time+timedelta(hours=3)
+            formatted = {
+                "EventName": event.name,
+                "StartDate": start_time,
+                "EndDate": end_time,
+                "Location": event.venues[0].address,
+                "EventType": 2,
+                "StressLevel": 0,
+                "Notes": event.json['url']
+            }
+            events.append(formatted)
 
     return events
