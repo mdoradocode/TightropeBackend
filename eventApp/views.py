@@ -97,7 +97,7 @@ def mindfulnesseventsAPI(request):
         event=MindfulnessEvents.objects.get(MindfulnessEventID=events_data['MindfulnessEventID'])
         event.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)
-    
+  
 
 
 @csrf_exempt
