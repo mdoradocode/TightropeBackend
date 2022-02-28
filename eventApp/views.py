@@ -81,19 +81,20 @@ def mindfulnesseventsAPI(request):
     #Update a record by passing a full JSON request, that includes all information for the event INCLUDING the MindfulnessEventID within the request
     #Example: 
     elif request.method=='PUT':
-        changed_data = JSONParser().parse(request)
-        to_update=MindfulnessEvents.objects.get(EventID=changed_data['EventID'])
-        events_serializer = MindfulnessEventsSerializer(to_update,data=changed_data)
+        events_data = JSONParser().parse(request)
+        events=MindfulnessEvents.objects.get(MindfulnessEventID=events_data['MindfulnessEventID'])
+        events_serializer = MindfulnessEventsSerializer(events,data=events_data)
         if events_serializer.is_valid():
             events_serializer.save()
-            return JsonResponse("Updated Mindfulness Event!",safe=False)
+            return JsonResponse("Updated event!",safe=False)
         return JsonResponse("Failed to update event.", safe=False)
     
     #Find and delete a record by passing a full JSON request, that includes all information for the event INCLUDING the MindfulnessEventID within the request
     #Example: 
     elif request.method=='DELETE':
-        deletion = JSONParser().parse(request)
-        event=MindfulnessEvents.objects.get(EventID=deletion['EventID'])
+        print("TEST1")
+        events_data = JSONParser().parse(request)
+        event=MindfulnessEvents.objects.get(MindfulnessEventID=events_data['MindfulnessEventID'])
         event.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)
     
