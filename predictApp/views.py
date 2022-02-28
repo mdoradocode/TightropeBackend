@@ -16,6 +16,8 @@ from predictApp.mindfulness_recommendation import mindfulness_recommendation_fin
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
 
+from eventApp.models import UserPreferences, MindfulnessEvents
+from eventApp.serializers import UserPreferencesSerializer, MindfulnessEventsSerializer
 
 
 # Create your views here.

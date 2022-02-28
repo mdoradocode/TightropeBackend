@@ -27,6 +27,7 @@
 
 import datetime
 import calendar
+import random
 
 from eventApp.models import UserPreferences
 
@@ -42,33 +43,46 @@ END_TIME_ID = 'EndDate'
 TIME_THRESHOLD = datetime.timedelta(hours=1)
 
 #   length of leisure event id
-PREFERRED_EVENT_LENGTH = "MindfulnessEventDuration"
+PREFERRED_EVENT_LENGTH = "UserPreferenceDuration"
 
 
 
 def mindfulness_recommendation_finder(calendar, event_preferences):
+    #   Get only events this week
+    today = datetime.datetime.today()
+    max = datetime.datetime.today()+datetime.timedelta(days=7)
 
-    #   only keep events that are in the next week
-    calendar = {key: value for key, value in calendar.items() if value.start_time.date() <= datetime.datetime.now().date() + datetime.timedelta(days=7)}
+    #   get the eligible dates
+    eligible_dates = []
+    for event in calendar:
+        start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
+        if start_date > today and start_date < max:
+            eligible_dates.append(event)
+    
+    #   sort the events by date
+    sorted_dates = sorted(eligible_dates, key=lambda x: x["StartDate"])
 
-    #   sort the events by start time
-    dict(sorted(calendar.items(), key=lambda item: item[START_TIME_ID]))
+    #   shuffle the event preferences for fun haha
+    random.shuffle(event_preferences)
 
-    # compare end time of previous event to the start time of next event to find a good open time
+    #   setting up variables for consistency
     time_for_event = 0
     previous_event = None
     count = 0
-    for event in calendar:
+    for event in sorted_dates:
         # don't do this for the first event
         if count != 0:
             #   if the time between the previous event and the current event is greater than the time threshold
-            if (event[START_TIME_ID] - previous_event[END_TIME_ID]) > TIME_THRESHOLD:
+            start_time = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
+            end_time = datetime.datetime.strptime(previous_event["EndDate"], '%Y-%m-%dT%H:%M:%SZ')
+            if (start_time - end_time) > TIME_THRESHOLD:
                 #   then we have a good time to practice mindfulness
-                time_for_event = previous_event[END_TIME_ID] + datetime.timedelta(minutes=15) # add 15 minute buffer after previous event
-                length_of_event = time_for_event - (event[START_TIME_ID] - datetime.timedelta(minutes=15)) # subtract 15 minutes before next event
+                time_for_event = end_time + datetime.timedelta(minutes=15) # add 15 minute buffer after previous event
+                length_of_event = (start_time - datetime.timedelta(minutes=15)) - end_time # subtract 15 minutes before next event
                 #   check if any preferred events fit the time window
                 for preferred_event in event_preferences:
-                    if preferred_event[PREFERRED_EVENT_LENGTH] < length_of_event:
+                    preferred_event_length = datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH])
+                    if preferred_event_length < length_of_event:
                         #   if so, return the event, and recommend the time
                         recommended_event = {
                             "UserEmail": event["UserEmail"],
@@ -78,17 +92,9 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
                             "Location": "",
                             "EventType": 0,
                             "StressLevel": 0,
-                            "Notes": preferred_event["MindfulnessEventNotes"]
+                            "Notes": preferred_event["UserPreferenceNotes"]
                         }
                         return recommended_event
-                        #   note, we may want to package this information into an event object and return that as a calendar event, where:
-                            #   event.name = preferred_event["name"]
-                            #   event.start_time = time_for_event
-                            #   event.end_time = time_for_event + preferred_event["length"]
-                            #   event.location = preferred_event["location"]
-                            #   event.description = preferred_event["description"]
-                        #   this will allow us to add the event to the calendar easier.
         previous_event = event
         count+=1
-    
     return None

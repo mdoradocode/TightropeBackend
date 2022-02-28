@@ -16,5 +16,7 @@ urlpatterns=[
     #returns the stress count
     path(r'stresscounter/<str:useremail>',views.stress_counter_view),
     #returns the ticketed recommendation
-    path(r'localevents/<str:useremail>',views.local_event_recommendations)
+    path(r'localevents/<str:useremail>',views.local_event_recommendations),
+    #returns a mindfulness recommendation
+    path(r'mindfulnessrecommender/<str:useremail>',views.mindfulness_event_recommendations)
 ]
