@@ -14,5 +14,6 @@ urlpatterns=[
     path(r'mindfulnessevents/<str:useremail>',views.mindfulnesseventsAPI),
 
     #User Preference Manipulation
+    path(r'mindfulpreference/<str:useremail>',views.userMindfulnessPreferences),
     path(r'mindfulpreference/<str:useremail>',views.userMindfulnessPreferences)
 ]
