@@ -92,7 +92,6 @@ def mindfulnesseventsAPI(request):
     #Find and delete a record by passing a full JSON request, that includes all information for the event INCLUDING the MindfulnessEventID within the request
     #Example: 
     elif request.method=='DELETE':
-        print("TEST1")
         events_data = JSONParser().parse(request)
         event=MindfulnessEvents.objects.get(MindfulnessEventID=events_data['MindfulnessEventID'])
         event.delete()
@@ -111,8 +110,23 @@ def userMindfulnessPreferences(request, useremail=""):
     #Takes a single request for a user's preferences and adds it to database
     if request.method=='POST':
         user_preferences = JSONParser().parse(request)
-        serialized_preferences = UserPreferencesSerializer(data=user_preferences)
+        print("TEST")
+        print(user_preferences['MindfulnessEventID'])
+        query_base_event=MindfulnessEvents.objects.filter(MindfulnessEventID=user_preferences['MindfulnessEventID'])
+        print("TEST2")
+        user_preference_dictionary = {}
+        for base_event in query_base_event:
+            user_preference_dictionary = {
+                'UserEmail': useremail,
+                'UserPreference': base_event.MindfulnessEventName,
+                'UserPreferenceDuration': base_event.MindfulnessEventDuration,
+                'UserPreferenceNotes': base_event.MindfulnessEventNotes
+            }
+        print("TEST3")
+        serialized_preferences = UserPreferencesSerializer(data=user_preference_dictionary)
+        print("SERIALIZED")
         serialized_preferences.is_valid()
+        print("TEST4")
         print(serialized_preferences.errors)
         if serialized_preferences.is_valid():
             serialized_preferences.save()
@@ -127,6 +141,6 @@ def userMindfulnessPreferences(request, useremail=""):
     #To me, this looks like it wouldn't work, might have to reqork this later
     if request.method=='DELETE':
         deletion = JSONParser().parse(request)
-        event=UserPreferences.objects.get(EventID=deletion['EventID'])
+        event=UserPreferences.objects.get(UserPreferenceID=deletion['UserPreferenceID'])
         event.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)

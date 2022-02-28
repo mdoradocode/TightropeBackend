@@ -27,6 +27,6 @@ class UserPreferencesSerializer(serializers.ModelSerializer):
         model = UserPreferences
         fields = ('UserPreferenceID',
                     'UserEmail',
-                    'UserPreference'
+                    'UserPreference',
                     'UserPreferenceDuration',
                     'UserPreferenceNotes')
