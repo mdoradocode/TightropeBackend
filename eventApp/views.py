@@ -110,10 +110,7 @@ def userMindfulnessPreferences(request, useremail=""):
     #Takes a single request for a user's preferences and adds it to database
     if request.method=='POST':
         user_preferences = JSONParser().parse(request)
-        print("TEST")
-        print(user_preferences['MindfulnessEventID'])
         query_base_event=MindfulnessEvents.objects.filter(MindfulnessEventID=user_preferences['MindfulnessEventID'])
-        print("TEST2")
         user_preference_dictionary = {}
         for base_event in query_base_event:
             user_preference_dictionary = {
@@ -122,11 +119,8 @@ def userMindfulnessPreferences(request, useremail=""):
                 'UserPreferenceDuration': base_event.MindfulnessEventDuration,
                 'UserPreferenceNotes': base_event.MindfulnessEventNotes
             }
-        print("TEST3")
         serialized_preferences = UserPreferencesSerializer(data=user_preference_dictionary)
-        print("SERIALIZED")
         serialized_preferences.is_valid()
-        print("TEST4")
         print(serialized_preferences.errors)
         if serialized_preferences.is_valid():
             serialized_preferences.save()
