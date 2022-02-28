@@ -23,3 +23,5 @@ class UserPreferences(models.Model):
     UserPreferenceID = models.AutoField(primary_key=True)
     UserEmail = models.CharField(max_length=25)
     UserPreference = models.CharField(max_length=50)
+    UserPreferenceDuration = models.IntegerField()
+    UserPreferenceNotes = models.CharField(max_length=300)
