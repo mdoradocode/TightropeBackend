@@ -12,7 +12,7 @@ urlpatterns=[
     #returns the work time
     path(r'worktime/<str:useremail>',views.worktime),
     #returns completed leisures, total leisures
-    path(r'leisurecalculator/<str:useremail>',views.leisure_calculator),
+    path(r'mindfulnesscounter/<str:useremail>',views.leisure_calculator),
     #returns the stress count
     path(r'stresscounter/<str:useremail>',views.stress_counter_view),
     #returns the ticketed recommendation
