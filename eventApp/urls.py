@@ -15,5 +15,8 @@ urlpatterns=[
 
     #User Preference Manipulation
     path(r'mindfulpreference/<str:useremail>',views.userMindfulnessPreferences),
-    path(r'mindfulpreference/<str:useremail>',views.userMindfulnessPreferences)
+    path(r'mindfulpreference/<str:useremail>',views.userMindfulnessPreferences),
+
+    #Stress Survey
+    path(r'stresssurvey/<str:useremail>',views.surveyApp)
 ]

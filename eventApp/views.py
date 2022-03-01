@@ -13,6 +13,9 @@ from eventApp.serializers import MindfulnessEventsSerializer
 from eventApp.models import UserPreferences
 from eventApp.serializers import UserPreferencesSerializer
 
+from eventApp.models import StressSurvey
+from eventApp.serializers import StressSurveySerializer
+
 # Create your views here.
 # At the moment this code will return all events, i will work on it later in order to make it return objects based on the UserID
 @csrf_exempt
@@ -136,5 +139,37 @@ def userMindfulnessPreferences(request, useremail=""):
     if request.method=='DELETE':
         deletion = JSONParser().parse(request)
         event=UserPreferences.objects.get(UserPreferenceID=deletion['UserPreferenceID'])
+        event.delete()
+        return JsonResponse("Deleted Sucessfully!",safe=False)
+
+
+@csrf_exempt
+def surveyApp(request, useremail=""):
+    if request.method=='GET':
+        result = StressSurvey.objects.filter(UserEmail=useremail)
+        serialized_survey = StressSurveySerializer(result, many=True)
+        return JsonResponse(serialized_survey.data,safe=False)
+    
+    if request.method=='POST':
+        survey_results = JSONParser().parse(request)
+        serialized_survey_results = StressSurveySerializer(data=survey_results)
+        serialized_survey_results.is_valid()
+        print(serialized_survey_results.errors)
+        if serialized_survey_results.is_valid():
+            serialized_survey_results.save()
+            return JsonResponse("Added new Stress Survey Result!", safe=False)
+        return JsonResponse("Failed to add new result.", safe=False)
+    
+    if request.method=='PUT':
+        new_value = JSONParser().parse(request)
+        old_value=StressSurvey.objects.get(UserEmail=useremail)
+        events_serializer = StressSurveySerializer(old_value, data=new_value)
+        if events_serializer.is_valid():
+            events_serializer.save()
+            return JsonResponse("Updated stress value!",safe=False)
+        return JsonResponse("Failed to update stress value.", safe=False)
+    
+    if request.method=='DELETE':
+        event=StressSurvey.objects.get(UserEmail=useremail)
         event.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)

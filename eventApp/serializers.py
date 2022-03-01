@@ -31,7 +31,7 @@ class UserPreferencesSerializer(serializers.ModelSerializer):
                     'UserPreferenceDuration',
                     'UserPreferenceNotes')
 
-class SressSurveySerializer(serializers.ModelSerializer):
+class StressSurveySerializer(serializers.ModelSerializer):
     class Meta:
         model = StressSurvey
         fields = ('SurveyID',
