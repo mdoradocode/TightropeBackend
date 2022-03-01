@@ -25,3 +25,8 @@ class UserPreferences(models.Model):
     UserPreference = models.CharField(max_length=50)
     UserPreferenceDuration = models.IntegerField()
     UserPreferenceNotes = models.CharField(max_length=500)
+
+class StressSurvey(models.Model):
+    SurveyID = models.AutoField(primary_key=True)
+    UserEmail = models.CharField(max_length=25)
+    SurveyValue = models.IntegerField()

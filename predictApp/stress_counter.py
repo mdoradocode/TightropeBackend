@@ -17,6 +17,6 @@ def stress_counter(events):
     eligible_dates = []
     for event in events:
         start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
-        if start_date < sat and start_date > sun and event["Leisure"] == False:
+        if start_date < sat and start_date > sun and event["EventType"] == 1:
             eligible_dates.append(event)
     return len(eligible_dates)
