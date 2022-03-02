@@ -12,12 +12,14 @@ def most_stressful_day_calculator(events):
     today = datetime.date.today()
     idx = (today.weekday() + 1) % 7
     sun = today - datetime.timedelta(idx)
+    print(sun)
     sat = sun + datetime.timedelta(6)
+    print(sat)
     #   get the eligible dates
     eligible_dates = []
     for event in events:
         start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
-        if start_date < sat and start_date > sun and event["EventType"] == 0:
+        if start_date <= sat and start_date >= sun and event["EventType"] == 0:
             eligible_dates.append(event)
     #   set up each date
     dateArray = [sun] * 7
@@ -30,10 +32,13 @@ def most_stressful_day_calculator(events):
     for i in eligible_dates:
         start_date = datetime.datetime.strptime(i["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
         for j in range(len(dateArray)):
-            start_date = datetime.datetime.strptime(i["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
+            start = datetime.datetime.strptime(i["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
+            start_date = start.date()
+            end = datetime.datetime.strptime(i["EndDate"], '%Y-%m-%dT%H:%M:%SZ')
+            time = end-start
             if start_date == dateArray[j]:
-                stress_count[j] += i["StressLevel"]
-
+                stress_count[j] += i["StressLevel"] * (time.total_seconds()/60/60)
+    print(stress_count)
     #   find the day(s) with the maximum stress level
     max_days = [i for i, x in enumerate(stress_count) if x == max(stress_count)]
     stressful_days = []
