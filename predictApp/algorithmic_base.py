@@ -37,9 +37,9 @@ def predict_stress(events, surveydata):
     leisure_events = []
     for event in events:
         start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ').date()
-        if start_date < sat and start_date > sun and event['EventType'] == 1:
+        if start_date < sat and start_date > sun and event['EventType'] == 0:
             stress_events.append(event)
-        elif start_date < sat and start_date > sun and event['EventType'] == 2:
+        elif start_date < sat and start_date > sun and event['EventType'] == 1:
             leisure_events.append(event)
 
     #   Failsafe in case there are no events this week:

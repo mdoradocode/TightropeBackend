@@ -90,7 +90,7 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
                             "StartDate": time_for_event,
                             "EndDate": time_for_event + datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH]),
                             "Location": "",
-                            "EventType": 0,
+                            "EventType": 2,
                             "StressLevel": 0,
                             "Notes": preferred_event["UserPreferenceNotes"]
                         }

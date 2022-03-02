@@ -65,7 +65,7 @@ def find_events(categories = '', city='Reno',  startDate = datetime.now().date()
                 "StartDate": start_time,
                 "EndDate": end_time,
                 "Location": event.venues[0].address,
-                "EventType": 2,
+                "EventType": 1,
                 "StressLevel": 0,
                 "Notes": event.json['url']
             }
