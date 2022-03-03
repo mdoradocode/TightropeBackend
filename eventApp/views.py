@@ -113,22 +113,25 @@ def userMindfulnessPreferences(request, useremail=""):
     #Takes a single request for a user's preferences and adds it to database
     if request.method=='POST':
         user_preferences = JSONParser().parse(request)
-        query_base_event=MindfulnessEvents.objects.filter(MindfulnessEventID=user_preferences['MindfulnessEventID'])
-        user_preference_dictionary = {}
-        for base_event in query_base_event:
-            user_preference_dictionary = {
-                'UserEmail': useremail,
-                'UserPreference': base_event.MindfulnessEventName,
-                'UserPreferenceDuration': base_event.MindfulnessEventDuration,
-                'UserPreferenceNotes': base_event.MindfulnessEventNotes
-            }
-        serialized_preferences = UserPreferencesSerializer(data=user_preference_dictionary)
-        serialized_preferences.is_valid()
-        print(serialized_preferences.errors)
-        if serialized_preferences.is_valid():
-            serialized_preferences.save()
-            return JsonResponse("Added Preference!", safe=False)
-        return JsonResponse("Failed to add event.", safe=False)
+        list = user_preferences['mindfulPreferenceIDs']
+        for i in list:
+            query_base_event=MindfulnessEvents.objects.filter(MindfulnessEventID=i)
+            user_preference_dictionary = {}
+            for base_event in query_base_event:
+                user_preference_dictionary = {
+                    'UserEmail': useremail,
+                    'UserPreference': base_event.MindfulnessEventName,
+                    'UserPreferenceDuration': base_event.MindfulnessEventDuration,
+                    'UserPreferenceNotes': base_event.MindfulnessEventNotes
+                }
+            serialized_preferences = UserPreferencesSerializer(data=user_preference_dictionary)
+            serialized_preferences.is_valid()
+            print(serialized_preferences.errors)
+            if serialized_preferences.is_valid():
+                serialized_preferences.save()
+            else:
+                return JsonResponse("Failed to add event", safe=False)
+        return JsonResponse("Successfully Added Preferences", safe=False)
 
     #I don't think this is relevant, this could be used to update a record of the user's preferences, but its standard
     if request.method=='PUT':
