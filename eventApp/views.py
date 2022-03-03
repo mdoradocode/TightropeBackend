@@ -118,6 +118,10 @@ def userMindfulnessPreferences(request, useremail=""):
         for i in props:
             print(i)
         print("TEST1.5")
+        print(useremail)
+        print(request.content_type)
+        print(request.content_params)
+        print("TEST1.75")
         user_preferences = JSONParser().parse(request)
         print("TEST2")
         list = user_preferences['mindfulPreferenceIDs']
