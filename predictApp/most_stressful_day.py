@@ -12,9 +12,7 @@ def most_stressful_day_calculator(events):
     today = datetime.date.today()
     idx = (today.weekday() + 1) % 7
     sun = today - datetime.timedelta(idx)
-    print(sun)
     sat = sun + datetime.timedelta(6)
-    print(sat)
     #   get the eligible dates
     eligible_dates = []
     for event in events:
