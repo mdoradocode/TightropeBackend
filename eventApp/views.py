@@ -112,8 +112,9 @@ def userMindfulnessPreferences(request, useremail=""):
 
     #Takes a single request for a user's preferences and adds it to database
     if request.method=='POST':
+        print("TEST")
         user_preferences = JSONParser().parse(request)
-        print(user_preferences["mindfulPreferenceIDs"])
+        print("TEST2")
         list = user_preferences['mindfulPreferenceIDs']
         for i in list:
             query_base_event=MindfulnessEvents.objects.filter(MindfulnessEventID=i)
