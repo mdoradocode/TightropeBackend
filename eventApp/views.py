@@ -113,15 +113,8 @@ def userMindfulnessPreferences(request, useremail=""):
     #Takes a single request for a user's preferences and adds it to database
     if request.method=='POST':
         print("TEST1")
-        print(request)
-        props = vars(request)
-        for i in props:
-            print(i)
+        print(request.data)
         print("TEST1.5")
-        print(useremail)
-        print(request.content_type)
-        print(request.content_params)
-        print("TEST1.75")
         user_preferences = JSONParser().parse(request)
         print("TEST2")
         list = user_preferences['mindfulPreferenceIDs']
