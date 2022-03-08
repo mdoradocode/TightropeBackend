@@ -112,7 +112,6 @@ def userMindfulnessPreferences(request, useremail=""):
 
     #Takes a single request for a user's preferences and adds it to database
     if request.method=='POST':
-        print(request)
         user_preferences = JSONParser().parse(request)
         list = user_preferences['mindfulPreferenceIDs']
         for i in list:
@@ -136,7 +135,32 @@ def userMindfulnessPreferences(request, useremail=""):
 
     #I don't think this is relevant, this could be used to update a record of the user's preferences, but its standard
     if request.method=='PUT':
-        pass
+        print("CHECK")
+        for event in UserPreferences.objects.filter(UserEmail=useremail):
+            print(event)
+            event.delete()
+        print("DELETED!")
+        user_preferences = JSONParser().parse(request)
+        list = user_preferences['mindfulPreferenceIDs']
+        print("CHECK2")
+        for i in list:
+            query_base_event=MindfulnessEvents.objects.filter(MindfulnessEventID=i)
+            user_preference_dictionary = {}
+            for base_event in query_base_event:
+                user_preference_dictionary = {
+                    'UserEmail': useremail,
+                    'UserPreference': base_event.MindfulnessEventName,
+                    'UserPreferenceDuration': base_event.MindfulnessEventDuration,
+                    'UserPreferenceNotes': base_event.MindfulnessEventNotes
+                }
+            serialized_preferences = UserPreferencesSerializer(data=user_preference_dictionary)
+            serialized_preferences.is_valid()
+            print(serialized_preferences.errors)
+            if serialized_preferences.is_valid():
+                serialized_preferences.save()
+            else:
+                return JsonResponse("Failed to add event", safe=False)
+        return JsonResponse("Successfully Added Preferences", safe=False)
 
     #Deletes a record of a user's preferences
     #To me, this looks like it wouldn't work, might have to reqork this later
