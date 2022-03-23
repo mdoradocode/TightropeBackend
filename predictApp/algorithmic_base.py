@@ -74,7 +74,7 @@ def predict_stress(events, surveydata):
     mindful_calculation = mindful_total * mindful_event_weight
 
     # Calculate real stress level
-    real_stress_level = (stress_calculation - leisure_calculation - mindful_calculation + survey_calculation)
+    real_stress_level = (stress_calculation - leisure_calculation - mindful_calculation + survey_calculation)/100
 
     # Create boundaries    
     if real_stress_level < 0:
