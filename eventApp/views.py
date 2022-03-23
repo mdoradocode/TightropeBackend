@@ -198,6 +198,7 @@ def surveyApp(request, useremail=""):
         return JsonResponse("Failed to update stress value.", safe=False)
     
     if request.method=='DELETE':
-        event=StressSurvey.objects.get(UserEmail=useremail)
-        event.delete()
+        events=StressSurvey.objects.filter(UserEmail=useremail)
+        for event in events:
+            event.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)

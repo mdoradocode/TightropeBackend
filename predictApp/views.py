@@ -16,8 +16,8 @@ from predictApp.mindfulness_recommendation import mindfulness_recommendation_fin
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
 
-from eventApp.models import UserPreferences, MindfulnessEvents
-from eventApp.serializers import UserPreferencesSerializer, MindfulnessEventsSerializer
+from eventApp.models import UserPreferences, MindfulnessEvents, StressSurvey
+from eventApp.serializers import UserPreferencesSerializer, MindfulnessEventsSerializer, StressSurveySerializer
 
 
 # Create your views here.
@@ -27,7 +27,10 @@ def predictAPI(request,useremail=""):
     if request.method=='GET':
         events = Events.objects.filter(UserEmail=useremail)
         events_serializer = EventsSerializer(events, many=True)
-        stress_value = predict_stress(events_serializer.data, surveydata = 0)
+        survey_data = StressSurvey.objects.filter(UserEmail=useremail)
+        survey_serializer = StressSurveySerializer(survey_data, many=True)
+        print(survey_serializer.data)
+        stress_value = predict_stress(events_serializer.data, survey_serializer.data)
         #   I don't know if this is going to work. I might have to make a stress-prediction class and return that, but we will try.
         return JsonResponse(str(stress_value), safe=False)
     
