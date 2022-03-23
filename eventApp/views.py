@@ -180,10 +180,8 @@ def surveyApp(request, useremail=""):
     
     if request.method=='POST':
         survey_results = JSONParser().parse(request)
-        print("TEST")
         serialized_survey_results = StressSurveySerializer(data=survey_results)
         serialized_survey_results.is_valid()
-        print("TEST2")
         print(serialized_survey_results.errors)
         if serialized_survey_results.is_valid():
             serialized_survey_results.save()
@@ -200,7 +198,6 @@ def surveyApp(request, useremail=""):
         return JsonResponse("Failed to update stress value.", safe=False)
     
     if request.method=='DELETE':
-        events=StressSurvey.objects.filter(UserEmail=useremail)
-        for event in events:
-            event.delete()
+        event=StressSurvey.objects.get(UserEmail=useremail)
+        event.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)
