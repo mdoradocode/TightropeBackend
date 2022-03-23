@@ -67,32 +67,34 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
 
     #   setting up variables for consistency
     time_for_event = 0
-    end_time = datetime.datetime.now()
+    previous_event = None
     count = 0
     for event in sorted_dates:
-        #   if the time between the previous event and the current event is greater than the time threshold
-        start_time = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
-        if (start_time - end_time) > TIME_THRESHOLD:
-            #   then we have a good time to practice mindfulness
-            time_for_event = end_time + datetime.timedelta(minutes=15) # add 15 minute buffer after previous event
-            length_of_event = (start_time - datetime.timedelta(minutes=15)) - end_time # subtract 15 minutes before next event
-            #   check if any preferred events fit the time window
-            for preferred_event in event_preferences:
-                preferred_event_length = datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH])
-                if preferred_event_length < length_of_event:
-                    #   if so, return the event, and recommend the time
-                    recommended_event = {
-                        "UserEmail": event["UserEmail"],
-                        "EventName": preferred_event["UserPreference"],
-                        "StartDate": time_for_event,
-                        "EndDate": time_for_event + datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH]),
-                        "Location": "anywhere",
-                        "EventType": 2,
-                        "StressLevel": 0,
-                        "Notes": preferred_event["UserPreferenceNotes"]
-                    }
-                    return recommended_event
-        end_time = datetime.datetime.strptime(event["EndDate"], '%Y-%m-%dT%H:%M:%SZ')
+        # don't do this for the first event
+        if count != 0:
+            #   if the time between the previous event and the current event is greater than the time threshold
+            start_time = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
+            end_time = datetime.datetime.strptime(previous_event["EndDate"], '%Y-%m-%dT%H:%M:%SZ')
+            if (start_time - end_time) > TIME_THRESHOLD:
+                #   then we have a good time to practice mindfulness
+                time_for_event = end_time + datetime.timedelta(minutes=15) # add 15 minute buffer after previous event
+                length_of_event = (start_time - datetime.timedelta(minutes=15)) - end_time # subtract 15 minutes before next event
+                #   check if any preferred events fit the time window
+                for preferred_event in event_preferences:
+                    preferred_event_length = datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH])
+                    if preferred_event_length < length_of_event:
+                        #   if so, return the event, and recommend the time
+                        recommended_event = {
+                            "UserEmail": event["UserEmail"],
+                            "EventName": preferred_event["UserPreference"],
+                            "StartDate": time_for_event,
+                            "EndDate": time_for_event + datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH]),
+                            "Location": "anywhere",
+                            "EventType": 2,
+                            "StressLevel": 0,
+                            "Notes": preferred_event["UserPreferenceNotes"]
+                        }
+                        return recommended_event
+        previous_event = event
         count+=1
-        
     return None
