@@ -75,7 +75,14 @@ def predict_stress(events, surveydata):
 
     # Calculate real stress level
     real_stress_level = (stress_calculation - leisure_calculation - mindful_calculation + survey_calculation)
-    
+
+    # Create boundaries    
+    if real_stress_level < 0:
+        real_stress_level = 0
+    if real_stress_level > 1:
+        real_stress_level = 1
+
+
     print(real_stress_level)
     
     # Return stress level
