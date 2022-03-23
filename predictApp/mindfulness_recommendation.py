@@ -54,6 +54,7 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
 
     #   get the eligible dates
     eligible_dates = []
+
     for event in calendar:
         start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
         if start_date > today and start_date <= max:
