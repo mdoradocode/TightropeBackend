@@ -55,5 +55,8 @@ def most_stressful_day_calculator(events):
             stressful_days.append("Friday")
         elif i == 6:
             stressful_days.append("Saturday")
-        
+    
+    if len(max_days) > 6:
+        return "All Days are stressful!"
+
     return stressful_days

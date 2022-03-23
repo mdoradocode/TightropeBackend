@@ -24,4 +24,4 @@ def work_time_calculator(events):
         total_time += time.total_seconds()
     print("Total stress time is: " + str(total_time))
     print("Total stress time in minutes: " + str(total_time/60))
-    return total_time/60/7 # minutes/day
+    return total_time/60/5 # minutes/day
