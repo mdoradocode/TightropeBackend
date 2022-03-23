@@ -67,8 +67,11 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
 
     #   setting up variables for consistency
     time_for_event = 0
-    end_time = datetime.datetime.now()
+    #   Edit by Michael on 3/23
+    #   added .replace(microsecond=0) to the end of this next statement because it was causing problems in time and date storage within the database
+    end_time = datetime.datetime.now().replace(microsecond=0)
     count = 0
+    
     for event in sorted_dates:
         #   if the time between the previous event and the current event is greater than the time threshold
         start_time = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
