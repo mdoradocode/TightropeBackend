@@ -29,6 +29,7 @@ def predictAPI(request,useremail=""):
         events_serializer = EventsSerializer(events, many=True)
         survey_data = StressSurvey.objects.filter(UserEmail=useremail)
         survey_serializer = StressSurveySerializer(survey_data, many=True)
+        print(survey_serializer.data)
         stress_value = predict_stress(events_serializer.data, survey_serializer.data)
         #   I don't know if this is going to work. I might have to make a stress-prediction class and return that, but we will try.
         return JsonResponse(str(stress_value), safe=False)
