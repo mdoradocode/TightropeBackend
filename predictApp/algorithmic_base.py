@@ -24,7 +24,7 @@ max_stress_report = 3
 leisure_event_weight = 1
 survey_weight =  .70
 mindful_event_weight = 2
-stress_event_weight = 1
+stress_event_weight = .5
 
 def predict_stress(events, surveydata):
 
@@ -62,7 +62,11 @@ def predict_stress(events, surveydata):
     # Calculate current stress level
     reported_sum = 0
     for event in stress_events:
-        reported_sum += event['StressLevel']
+        start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
+        end_date = datetime.datetime.strptime(event["EndDate"], '%Y-%m-%dT%H:%M:%SZ')
+        difference = end_date-start_date
+        difference_hours = difference.total_seconds()/3600
+        reported_sum += event['StressLevel'] * difference_hours
     # Calculate leisure event stress reduction
     stress_calculation = reported_sum * stress_event_weight
     leisure_calculation = leisure_total * leisure_event_weight
@@ -71,9 +75,8 @@ def predict_stress(events, surveydata):
 
     # Calculate real stress level
     real_stress_level = (stress_calculation - leisure_calculation - mindful_calculation + survey_calculation)
-    z = np.exp(-real_stress_level)
-    #   apply a sigmoid function to the stress level
-    sig = 1 / (1 + z)
+    
+    print(real_stress_level)
     
     # Return stress level
-    return sig
+    return real_stress_level
