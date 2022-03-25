@@ -40,7 +40,6 @@ def ticketed_recommendation_finder(calendar, categories = ""):
             start_time = datetime.datetime.strptime(event[START_TIME_ID], "%Y-%m-%dT%H:%M:%SZ")
             if start_time.date() == day:
                 event_array_by_date[day_array.index(day)].append(event)
-    print(event_array_by_date)
     final_events = []
     for count, day in enumerate(event_array_by_date):
         final_time = datetime.datetime.combine(datetime.date.today() + datetime.timedelta(days=count), datetime.time(hour=0, minute=0, second=0))
@@ -49,18 +48,13 @@ def ticketed_recommendation_finder(calendar, categories = ""):
             if end_time > final_time:
                 final_time = end_time
         final_events.append(final_time)
-    print(final_events)
     recommended_events = []
     for end_time in final_events:
         end_of_search = datetime.datetime.combine(end_time.date()+datetime.timedelta(days=1), datetime.time(hour=4, minute=59, second=59))
-        print(end_time)
         events = predictApp.webscraper.find_events(categories = categories, startDate = end_time, endDate=end_of_search)
         for event in events:
             if event["StartDate"] >= end_time + TIME_THRESHOLD:
                 recommended_events.append(event)
         time.sleep(1)
-    
-    #   make sure the events arent overlapping?
-    print(recommended_events)
 
     return recommended_events
