@@ -31,7 +31,6 @@ TIME_THRESHOLD = datetime.timedelta(hours=1)
 def ticketed_recommendation_finder(calendar, categories = ""):
     #   only keep events that are in the next week
     currentDate = datetime.datetime.now().date()
-    endDate = datetime.datetime.now().date() + datetime.timedelta(days=7)
     day_array = []
     event_array_by_date = [[] for i in range(7) ]
     for i in range(7):
@@ -41,19 +40,27 @@ def ticketed_recommendation_finder(calendar, categories = ""):
             start_time = datetime.datetime.strptime(event[START_TIME_ID], "%Y-%m-%dT%H:%M:%SZ")
             if start_time.date() == day:
                 event_array_by_date[day_array.index(day)].append(event)
-
-    recommended_events = []
-    for idx, day in enumerate(event_array_by_date):
-        date = currentDate + datetime.timedelta(days=idx)
-        end_time = datetime.datetime.combine(date, datetime.time(hour=0, minute=0, second=0))
-        end_of_search = datetime.datetime.combine(date+datetime.timedelta(days=1), datetime.time(hour=4, minute=59, second=59))
+    print(event_array_by_date)
+    final_events = []
+    for count, day in enumerate(event_array_by_date):
+        final_time = datetime.datetime.combine(datetime.date.today() + datetime.timedelta(days=count), datetime.time(hour=0, minute=0, second=0))
         for event in day:
-            event_end_time = datetime.datetime.strptime(event[START_TIME_ID], "%Y-%m-%dT%H:%M:%SZ")
-            if event_end_time > end_time:
-                end_time = event_end_time
-        recommended_events.append(predictApp.webscraper.find_events(categories = categories, startDate = end_time, endDate=end_of_search))
+            end_time = datetime.datetime.strptime(event[END_TIME_ID], "%Y-%m-%dT%H:%M:%SZ")
+            if end_time > final_time:
+                final_time = end_time
+        final_events.append(final_time)
+    print(final_events)
+    recommended_events = []
+    for end_time in final_events:
+        end_of_search = datetime.datetime.combine(end_time.date()+datetime.timedelta(days=1), datetime.time(hour=4, minute=59, second=59))
+        print(end_time)
+        events = predictApp.webscraper.find_events(categories = categories, startDate = end_time, endDate=end_of_search)
+        for event in events:
+            if event["StartDate"] >= end_time + TIME_THRESHOLD:
+                recommended_events.append(event)
         time.sleep(1)
     
-    #   format to be done sort of similar to the event data structure.
+    #   make sure the events arent overlapping?
+    print(recommended_events)
 
     return recommended_events
