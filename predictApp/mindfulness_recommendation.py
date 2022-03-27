@@ -55,16 +55,40 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
     #   get the eligible dates
     eligible_dates = []
 
-    for event in calendar:
+     #   shuffle the event preferences for fun haha
+    random.shuffle(event_preferences)
+
+    #   get the user's email
+    useremail = ""
+
+    for count, event in enumerate(calendar):
+        if count == 1:
+            useremail = event["UserEmail"]
         start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
         if start_date > today and start_date <= max:
             eligible_dates.append(event)
     
+
+    #   if there's no events, return an event at a default time
+    if not eligible_dates:
+        print("NO ELIGIBLE DATES")
+        #   default time is now + 1 hour
+        print("DEFAULT TIME")
+        recommended_event = {
+            "UserEmail": useremail,
+            "EventName": "Meditation",
+            "StartDate": datetime.datetime.today() + datetime.timedelta(hours=1),
+            "EndDate": datetime.datetime.today() + datetime.timedelta(hours=1) + datetime.timedelta(minutes=10),
+            "Location": "anywhere",
+            "EventType": 2,
+            "StressLevel": 0,
+            "Notes": "Take some time to focus on your breathing, settling into your environment and just listening."
+        }
+        return recommended_event
+
     #   sort the events by date
     sorted_dates = sorted(eligible_dates, key=lambda x: x["StartDate"])
 
-    #   shuffle the event preferences for fun haha
-    random.shuffle(event_preferences)
 
     #   setting up variables for consistency
     time_for_event = 0
@@ -83,7 +107,7 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
             #   check if any preferred events fit the time window
             for preferred_event in event_preferences:
                 preferred_event_length = datetime.timedelta(minutes=preferred_event[PREFERRED_EVENT_LENGTH])
-                if preferred_event_length < length_of_event:
+                if preferred_event_length < length_of_event and time_for_event.time() > datetime.time(hour=6, minute=0) and time_for_event.time() < datetime.time(hour=22, minute=0):
                     #   if so, return the event, and recommend the time
                     recommended_event = {
                         "UserEmail": event["UserEmail"],
