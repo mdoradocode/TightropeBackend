@@ -1,8 +1,10 @@
+import datetime
 from importlib.metadata import requires
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
+import json
 
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
@@ -15,6 +17,10 @@ from eventApp.serializers import UserPreferencesSerializer
 
 from eventApp.models import StressSurvey
 from eventApp.serializers import StressSurveySerializer
+
+from eventApp.models import Streaks
+from eventApp.serializers import StreaksSerializer
+from eventApp.streaks import streakEvents
 
 # Create your views here.
 # At the moment this code will return all events, i will work on it later in order to make it return objects based on the UserID
@@ -201,4 +207,65 @@ def surveyApp(request, useremail=""):
         events=StressSurvey.objects.filter(UserEmail=useremail)
         for event in events:
             event.delete()
+        return JsonResponse("Deleted Sucessfully!",safe=False)
+
+
+#This one is wonky GET will return a list of events AND the user data pertaining to streaks in a single JSON response through a list
+@csrf_exempt
+def streaks(request,useremail=""):
+
+    #Returns a list of eligible events (within a time frame) and the user data for said events
+    if request.method == 'GET':
+        #Next three lines are for debugging what records are in the database, can be commented out and gotten rid of as needed
+        allUserData = Streaks.objects.all()
+        allUserData_serializer = StreaksSerializer(allUserData,many=True)
+        print("All Users in DB: ", allUserData_serializer.data)
+        
+        #Grab and serialize all the data for the user
+        user_streaks = Streaks.objects.filter(UserEmail = useremail)
+        user_streaks_serializer = StreaksSerializer(user_streaks,many=True)
+
+        #Use the user data and the streakEvents method to determine which event objects should go on the list
+        event_list = streakEvents(user_streaks_serializer.data[0])
+
+        #Make a list object out of the two above list objects
+        jsonReturnList = [user_streaks_serializer.data, event_list]
+
+        #return the list of lists
+        return JsonResponse(jsonReturnList, safe=False)
+
+    #Method only to be user wil NEW users
+    elif request.method=='POST':
+        #Define a new initial user from the email passed in the routing
+        streaks_data = {
+                        "UserEmail": useremail,
+                        "StreakCount": 0,
+                        "LastLogin": datetime.datetime.now().replace(microsecond=0)
+        }
+        #Serialize the and save the data
+        streaks_serializer = StreaksSerializer(data=streaks_data)
+        streaks_serializer.is_valid()
+        print(streaks_serializer.errors)
+        if streaks_serializer.is_valid():
+            streaks_serializer.save()
+            return JsonResponse("Added User!", safe=False)
+        return JsonResponse("Failed to add User.", safe=False)
+
+    #Update a user profile that already exists
+    elif request.method == 'PUT':
+        #Parse up the data in the request
+        streaks = JSONParser().parse(request)
+        #Get the user record that pertains to the email in the body
+        streaks_user_data = Streaks.objects.get(UserEmail = streaks['UserEmail'])
+        #replace the old data (streaks_user_data) with the new data (streaks)
+        streaks_serializer = StreaksSerializer(streaks_user_data, data=streaks)
+        if(streaks_serializer.is_valid()):
+            streaks_serializer.save()
+            return JsonResponse("Streaks object successfully updated!", safe=False)
+        return JsonResponse("Unable to update streaks object!", safe=False)
+
+    #Delete a record based on the UserID that will be passed in the place of useremail
+    elif request.method=='DELETE':
+        data=Streaks.objects.filter(UserID=useremail) #Useremail = UserID in this call
+        data.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from eventApp.models import Events, MindfulnessEvents, UserPreferences, StressSurvey
+from eventApp.models import Events, MindfulnessEvents, UserPreferences, StressSurvey, Streaks
 
 class EventsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -37,3 +37,11 @@ class StressSurveySerializer(serializers.ModelSerializer):
         fields = ('SurveyID',
                     'UserEmail',
                     'SurveyValue')
+
+class StreaksSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Streaks
+        fields = ('UserID',
+                    'UserEmail',
+                    'StreakCount',
+                    'LastLogin')

@@ -1,6 +1,7 @@
 from django.urls import path
 
 from eventApp import views
+from eventApp.models import Streaks
 
 urlpatterns=[
     #Route requests with the event tag on them to the events api
@@ -18,5 +19,9 @@ urlpatterns=[
     path(r'mindfulpreference/<str:useremail>',views.userMindfulnessPreferences),
 
     #Stress Survey
-    path(r'stresssurvey/<str:useremail>',views.surveyApp)
+    path(r'stresssurvey/<str:useremail>',views.surveyApp),
+
+    #Streaks
+    path(r'streaks/', views.streaks),
+    path(r'streaks/<str:useremail>', views.streaks)
 ]

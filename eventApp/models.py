@@ -30,3 +30,9 @@ class StressSurvey(models.Model):
     SurveyID = models.AutoField(primary_key=True)
     UserEmail = models.CharField(max_length=50)
     SurveyValue = models.IntegerField()
+
+class Streaks(models.Model):
+    UserID = models.AutoField(primary_key=True)
+    UserEmail = models.CharField(max_length=100,unique=True)
+    StreakCount = models.IntegerField()
+    LastLogin = models.DateTimeField()
