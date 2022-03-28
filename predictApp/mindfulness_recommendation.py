@@ -73,8 +73,8 @@ def mindfulness_recommendation_finder(calendar, event_preferences, useremail):
         recommended_event = {
             "UserEmail": useremail,
             "EventName": "Meditation",
-            "StartDate": datetime.datetime.today() + datetime.timedelta(hours=1),
-            "EndDate": datetime.datetime.today() + datetime.timedelta(hours=1) + datetime.timedelta(minutes=10),
+            "StartDate": (datetime.datetime.today() + datetime.timedelta(hours=1)).replace(microsecond=0),
+            "EndDate": (datetime.datetime.today() + datetime.timedelta(hours=1) + datetime.timedelta(minutes=10)).replace(microsecond=0),
             "Location": "anywhere",
             "EventType": 2,
             "StressLevel": 0,
