@@ -86,6 +86,6 @@ def mindfulness_event_recommendations(request, useremail=""):
         events_serializer = EventsSerializer(events, many=True)
         event_preferences = UserPreferences.objects.filter(UserEmail=useremail)
         event_preferences_serializer = UserPreferencesSerializer(event_preferences, many=True)
-        recommendation = mindfulness_recommendation_finder(events_serializer.data, event_preferences_serializer.data)
+        recommendation = mindfulness_recommendation_finder(events_serializer.data, event_preferences_serializer.data, useremail)
         serialized_recommendation = EventsSerializer(recommendation)
         return JsonResponse(serialized_recommendation.data,safe=False)

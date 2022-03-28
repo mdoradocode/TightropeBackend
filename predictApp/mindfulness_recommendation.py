@@ -47,7 +47,7 @@ PREFERRED_EVENT_LENGTH = "UserPreferenceDuration"
 
 
 
-def mindfulness_recommendation_finder(calendar, event_preferences):
+def mindfulness_recommendation_finder(calendar, event_preferences, useremail):
     #   Get only events this week
     today = datetime.datetime.today()
     max = datetime.datetime.today()+datetime.timedelta(days=7)
@@ -58,12 +58,8 @@ def mindfulness_recommendation_finder(calendar, event_preferences):
      #   shuffle the event preferences for fun haha
     random.shuffle(event_preferences)
 
-    #   get the user's email
-    useremail = ""
 
     for count, event in enumerate(calendar):
-        if count == 1:
-            useremail = event["UserEmail"]
         start_date = datetime.datetime.strptime(event["StartDate"], '%Y-%m-%dT%H:%M:%SZ')
         if start_date > today and start_date <= max:
             eligible_dates.append(event)
