@@ -7,6 +7,7 @@ from django.http.response import JsonResponse
 from django.http.response import HttpResponse
 from ics import Calendar, Event
 import json
+import os
 
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
@@ -282,15 +283,17 @@ def ics(request, useremail=""):
             e = Event()
             e.name = event["EventName"]
             e.begin = event["StartDate"][:-1]
-            print(event["StartDate"][:-1])
             e.end = event["EndDate"][:-1]
             e.description = event["Notes"]
             e.location = event["Location"]
             calendar.events.add(e)
             calendar.events
+        
         filename = useremail + "_calendar.ics"
         filepath = "static/ics/" + filename
-        f = open(filepath, 'a')
+        if os.path.exists(filepath):
+            os.remove(filepath)
+        f = open(filepath, 'w')
         f.write(str(calendar))
         f.close()
         file = "/static/ics/"
