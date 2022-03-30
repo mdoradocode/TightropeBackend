@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
+from django.http.response import HttpResponse
+from ics import Calendar, Event
 import json
 
 from eventApp.models import Events
@@ -269,3 +271,32 @@ def streaks(request,useremail=""):
         data=Streaks.objects.filter(UserID=useremail) #Useremail = UserID in this call
         data.delete()
         return JsonResponse("Deleted Sucessfully!",safe=False)
+
+@csrf_exempt
+def ics(request, useremail=""):
+    if request.method=='GET':
+        events = Events.objects.filter(UserEmail=useremail)
+        events_serializer = EventsSerializer(events, many=True)
+        calendar = Calendar()
+        for event in events_serializer.data:
+            e = Event()
+            e.name = event["EventName"]
+            e.begin = event["StartDate"][:-1]
+            print(event["StartDate"][:-1])
+            e.end = event["EndDate"][:-1]
+            e.description = event["Notes"]
+            e.location = event["Location"]
+            calendar.events.add(e)
+            calendar.events
+        filename = useremail + "_calendar.ics"
+        filepath = "static/ics/" + filename
+        f = open(filepath, 'a')
+        f.write(str(calendar))
+        f.close()
+        file = "/static/ics/"
+        fl = open(filepath, 'r')
+        response = HttpResponse(fl, content_type=ics)
+        response['Content-Disposition'] = "attachment; filename=%s" % filename
+        return response
+    if request.method=='POST':
+        return

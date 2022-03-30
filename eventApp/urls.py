@@ -23,5 +23,8 @@ urlpatterns=[
 
     #Streaks
     path(r'streaks/', views.streaks),
-    path(r'streaks/<str:useremail>', views.streaks)
+    path(r'streaks/<str:useremail>', views.streaks),
+
+    #whole calendar file
+    path(r'ics/<str:useremail>', views.ics)
 ]
