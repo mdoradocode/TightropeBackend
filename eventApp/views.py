@@ -303,9 +303,34 @@ def ics(request, useremail=""):
         response = HttpResponse(fl, content_type=ics)
         response['Content-Disposition'] = "attachment; filename=%s" % filename
         return response
+    
     if request.method=='POST':
         #I have to wait to develop this section until the front end is sending the file back I think...
-        c = request.files['file']
-        for e in c:
-            print(e)
-        return
+        data = request.FILES['calendar']
+        string = ""
+        for line in data:
+            string += line.decode('UTF-8')
+        c = Calendar(string)
+        tz = pytz.timezone("US/Pacific")
+        for e in c.events:
+            start_time = e.begin.astimezone(tz)
+            end_time = e.end.astimezone(tz)
+            event = {
+                "UserEmail": useremail,
+                "EventName": e.name,
+                "StartDate": start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "EndDate": end_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "Location": e.location,
+                "EventType": 4,
+                "StressLevel": 0,
+                "Notes": e.description
+            }
+            events_serializer = EventsSerializer(data=event)
+            events_serializer.is_valid()
+        
+            if events_serializer.is_valid():
+                events_serializer.save()
+            else:
+                return JsonResponse("Operation Failed. Please Try Again.", safe=False)
+
+        return JsonResponse("Added Calendar!", safe=False)

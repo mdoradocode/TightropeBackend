@@ -2,804 +2,12 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:Don't bring up politics
-DTEND:20220316T020000Z
-LOCATION:Parent's House
-DTSTART:20220316T000000Z
-SUMMARY:Dinner w/Parents
-UID:1cfaaf87-8b58-48a1-a529-1578829f6f26@1cfa.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
-DTEND:20220324T061247Z
-LOCATION:anywhere
-DTSTART:20220324T060747Z
-SUMMARY:The Self-Compassion Pause
-UID:02be315c-f71d-4bf9-b2db-4141ad73099e@02be.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:MIDTERM
-DTEND:20220311T014500Z
-LOCATION:Laxalt Mining
-DTSTART:20220310T230000Z
-SUMMARY:CS 453
-UID:f51f36b0-b94f-4d50-8be0-1807f3a9178d@f51f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220407T184500Z
-LOCATION:Location
-DTSTART:20220407T173000Z
-SUMMARY:CS 426
-UID:a17a90fe-d38d-4ea2-b116-1ce5ade59314@a17a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:This is a test!!
-DTEND:20220223T220000Z
-LOCATION:Field
-DTSTART:20220223T190000Z
-SUMMARY:Walkings
-UID:118ddc69-b64f-4cbf-8ac1-ed4d1f7adfa7@118d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:P3 due Thursday
-DTEND:20220301T194500Z
-LOCATION:New Engineering Building
-DTSTART:20220301T183000Z
-SUMMARY:CS 426
-UID:18ccd16d-df3f-4822-a4a1-f48f240ede33@18cc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Notice 5 things you see \n2.Notice 4 things you feel \n3.Notice 3 things you hear \n4.Notice 2 things you smell \n5.Notice 1 thing you taste
-DTEND:20220309T133900Z
-LOCATION:anywhere
-DTSTART:20220309T133400Z
-SUMMARY:Five Senses Exercise
-UID:701dbd70-57d1-49f8-a540-bd9179a828c8@701d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220309T102400Z
-LOCATION:anywhere
-DTSTART:20220309T100900Z
-SUMMARY:The Body Scan
-UID:25d44d62-447f-4b28-8fc4-8d1289f3f90f@25d4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Minute 1  - focus on feelings\, thoughts\,sensations \n2.Minute 2 - keeping awareness of breath \n3.Minute 3 - notice the ways in which breathing affects the rest of the body
-DTEND:20220314T054800Z
-LOCATION:anywhere
-DTSTART:20220314T054500Z
-SUMMARY:3-Minute Breathing Space
-UID:2a804a56-8afa-489c-ae56-60a4fd342aed@2a80.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220329T160100Z
-LOCATION:Remote
-DTSTART:20220329T140000Z
-SUMMARY:Research Meeting
-UID:6c6cd21f-9060-44da-8953-3fdc3de666c3@6c6c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:This is a custom Mindful Event for testing
-DTEND:20220318T233000Z
-LOCATION:House
-DTSTART:20220318T230000Z
-SUMMARY:Custom Mindful Event
-UID:723b0724-7e7f-4dd8-93fe-731af39dd060@723b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-13-2022/event/39005B7EE9E3A63B
-DTEND:20220314T053000Z
-LOCATION:407 N Virginia St
-DTSTART:20220314T023000Z
-SUMMARY:Laugh Factory
-UID:a260e76e-701e-453d-bd5d-5ad14b5f0130@a260.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:This is a Note about running
-DTEND:20220222T003000Z
-LOCATION:Football Field
-DTSTART:20220221T223000Z
-SUMMARY:Running
-UID:f7e73f04-17fd-4e13-9e2c-33c8b238001c@f7e7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Prep Encounter
-DTEND:20220314T010000Z
-LOCATION:Michael's Place
-DTSTART:20220313T210000Z
-SUMMARY:D&D Sunday Session
-UID:fdaf0955-db94-476b-bb0d-6da8a468d442@fdaf.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Lower Back
-DTEND:20220310T040000Z
-LOCATION:Home
-DTSTART:20220310T030000Z
-SUMMARY:Stretching
-UID:7d1a3baf-06f3-4140-a170-c786fc9ea4d9@7d1a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Meeting for team
-DTEND:20220331T023000Z
-LOCATION:HREL
-DTSTART:20220331T020000Z
-SUMMARY:Meeting
-UID:1bb90f81-b2d6-429f-8770-3dfea6f87411@1bb9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Yaawn
-DTEND:20220326T033000Z
-LOCATION:Japan
-DTSTART:20220326T013000Z
-SUMMARY:Skating again
-UID:0bd6e51e-743e-4123-8f88-8a8168364427@0bd6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Ahhhhh
-DTEND:20220310T203000Z
-LOCATION:HREL maybe
-DTSTART:20220310T193000Z
-SUMMARY:PROJECT DEMO
-UID:1cc284aa-4a0e-4164-98b8-ec1025a12201@1cc2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Ask about final project
-DTEND:20220308T211500Z
-LOCATION:EJCH
-DTSTART:20220308T200000Z
-SUMMARY:CS 420
-UID:a23d9c7a-818a-4aa3-b1a2-a013c9c98df7@a23d.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Yaawn
-DTEND:20220326T003000Z
-LOCATION:Japan
-DTSTART:20220325T223000Z
-SUMMARY:Skating again
-UID:446198d6-8c43-406e-bb71-5073c29d169a@4461.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220330T022215Z
-LOCATION:anywhere
-DTSTART:20220330T015215Z
-SUMMARY:The Body Scan
-UID:5ec3ab62-5939-4499-a3bb-7452cf9f134c@5ec3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220405T153000Z
-LOCATION:remote
-DTSTART:20220405T150000Z
-SUMMARY:Research Meeting
-UID:5cad9240-6616-4ed8-9b99-40bf6f15d624@5cad.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220309T085900Z
-LOCATION:anywhere
-DTSTART:20220309T084400Z
-SUMMARY:The Body Scan
-UID:a8a4736b-e5f0-4235-9685-8cf1ab42ea7f@a8a4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Notice 5 things you see \n2.Notice 4 things you feel \n3.Notice 3 things you hear \n4.Notice 2 things you smell \n5.Notice 1 thing you taste
-DTEND:20220309T131900Z
-LOCATION:anywhere
-DTSTART:20220309T131400Z
-SUMMARY:Five Senses Exercise
-UID:5351cdf4-35cb-41b3-ab46-7179371b1a1e@5351.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Ask Bryan about debugger
-DTEND:20220302T221500Z
-LOCATION:New Engineering Building
-DTSTART:20220302T210000Z
-SUMMARY:CS 381
-UID:5f92d7ed-edd5-40f2-9418-0b14ee49a534@5f92.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Left Shark
-DTEND:20220302T204600Z
-LOCATION:School
-DTSTART:20220302T204600Z
-SUMMARY:Dancing Robots
-UID:b49051f1-0bfe-4b16-9bd4-08d8f9b76aa7@b490.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Each participant identifies one thing they are stressed about and one thing they are excited about \n2.Take turns speaking about the events identified in the previous step \n3.Notice how it feels to speak about the positive vs negative experience \n4.Notice how it feels to listen to the positive and negative experiences
-DTEND:20220314T013000Z
-LOCATION:anywhere
-DTSTART:20220314T011500Z
-SUMMARY:Mindful Listening (2+ participants)
-UID:b733cb25-28b3-4098-8e98-ae31a33d3fca@b733.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220405T214500Z
-LOCATION:Location
-DTSTART:20220405T203000Z
-SUMMARY:CS 477
-UID:585afbcc-499d-45da-952f-5fdf9709d9af@585a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:This is a note about studying
-DTEND:20220209T023000Z
-LOCATION:Delmare
-DTSTART:20220208T223000Z
-SUMMARY:Studying
-UID:eeed0caa-19a1-4aff-b962-0a9bd3261295@eeed.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220331T000000Z
-LOCATION:Remote
-DTSTART:20220330T220000Z
-SUMMARY:Work
-UID:1e22a245-a27c-40e5-b2e1-dc933ab9d5f1@1e22.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220331T214500Z
-LOCATION:Location
-DTSTART:20220331T203000Z
-SUMMARY:CS 477
-UID:61014b74-7773-4dc4-bb08-a1e5bb1a6f18@6101.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220331T170000Z
-LOCATION:Location
-DTSTART:20220331T150000Z
-SUMMARY:Breakfast w Mom
-UID:14db8a48-0670-45e3-a048-6b18217f3aab@14db.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220329T214500Z
-LOCATION:Location
-DTSTART:20220329T203000Z
-SUMMARY:CS 477
-UID:ba2f999d-4d6b-4fd0-986d-f9ee9ae363a5@ba2f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220314T061800Z
-LOCATION:anywhere
-DTSTART:20220314T060300Z
-SUMMARY:The Body Scan
-UID:61f8ae6f-1137-4fc8-9b72-c5bf49267b21@61f8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Walking with friends
-DTEND:20220327T203000Z
-LOCATION:Riverwalk District
-DTSTART:20220327T170000Z
-SUMMARY:River Walk
-UID:7c61c7bf-8ff3-43a0-9c9f-83273e56d9d8@7c61.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
-DTEND:20220309T082900Z
-LOCATION:anywhere
-DTSTART:20220309T082400Z
-SUMMARY:The Self-Compassion Pause
-UID:425f0a95-8907-438e-a29c-5d3e5880d6f1@425f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:go to the store
-DTEND:20220311T024600Z
-LOCATION:reno
-DTSTART:20220311T004600Z
-SUMMARY:Shopping
-UID:cad1c3d0-2c86-4810-9843-a11af18660f4@cad1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Check player sheet with Agglath
-DTEND:20220228T020000Z
-LOCATION:Michael's Place
-DTSTART:20220227T220000Z
-SUMMARY:D&D Sunday Session
-UID:16b91125-e936-4017-9377-73be0bea8f83@16b9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:AS4 due Wednesday
-DTEND:20220228T221500Z
-LOCATION:Ansari 110
-DTSTART:20220228T210000Z
-SUMMARY:CS 381
-UID:cabc807e-9b60-4cd9-8888-38fadd0b6571@cabc.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220401T004500Z
-LOCATION:Location
-DTSTART:20220331T220000Z
-SUMMARY:CS 453
-UID:43d26c3c-4d16-45a8-9391-de68677a0f2c@43d2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Face a window \n2.Look outside - avoid labeling objects by conventional names\, instead notice colors/patterns \n3.Take note of the Shapes and segment the view \n4.Be observant not critical \n5.If distracted\, gently refocus on viewing shapes/patterns
-DTEND:20220324T052747Z
-LOCATION:anywhere
-DTSTART:20220324T051747Z
-SUMMARY:Mindful Seeing
-UID:e1c26ed0-1fb7-4a28-8f83-82a0ed5776b2@e1c2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220404T193000Z
-LOCATION:Remote
-DTSTART:20220404T143000Z
-SUMMARY:Work
-UID:48e85cef-907a-4655-bbce-792a3eb4ead7@48e8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Notice 5 things you see \n2.Notice 4 things you feel \n3.Notice 3 things you hear \n4.Notice 2 things you smell \n5.Notice 1 thing you taste
-DTEND:20220309T125900Z
-LOCATION:anywhere
-DTSTART:20220309T125400Z
-SUMMARY:Five Senses Exercise
-UID:01f8d675-c094-42e0-9b72-f5bdc973981d@01f8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220330T193000Z
-LOCATION:Location
-DTSTART:20220330T143000Z
-SUMMARY:Meeting
-UID:e9fd7016-3cbf-4fc5-999c-9489d72735a2@e9fd.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
-DTEND:20220309T080900Z
-LOCATION:anywhere
-DTSTART:20220309T080400Z
-SUMMARY:The Self-Compassion Pause
-UID:00404abf-61b0-4dd6-a7ff-e15c3fc521fd@0040.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Bring lunch
-DTEND:20220305T003000Z
-LOCATION:Innevation Center
-DTSTART:20220304T160000Z
-SUMMARY:Work
-UID:f01228db-e925-4bfa-ae0e-a380c081b207@f012.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Faith will be in hour early
-DTEND:20220306T220000Z
-LOCATION:Innevation Center
-DTSTART:20220306T160000Z
-SUMMARY:Makerthon Shift 2
-UID:d13e34aa-fdba-4cf1-8ab4-f867b4395fee@d13e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Get Butter
-DTEND:20220308T183000Z
-LOCATION:Raleys and Purple Bean
-DTSTART:20220308T160000Z
-SUMMARY:Coffee and Errands w/Nam
-UID:4a2a6585-6042-4ef4-85d9-3b05afc84b27@4a2a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Clean back room
-DTEND:20220228T220000Z
-LOCATION:Innevation Center
-DTSTART:20220228T160000Z
-SUMMARY:Work
-UID:a944071a-09a8-4751-b016-e998ccc21010@a944.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220401T230000Z
-LOCATION:Location
-DTSTART:20220401T190000Z
-SUMMARY:Work
-UID:2a692c08-b470-474c-ac4a-0066bbc6eda4@2a69.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220324T122300Z
-LOCATION:Home
-DTSTART:20220324T102300Z
-SUMMARY:Tightrpe
-UID:a737e0c3-1d8d-40f8-a282-ff183b35c1da@a737.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:No Notes
-DTEND:20220315T000000Z
-LOCATION:Innevation Center
-DTSTART:20220314T150000Z
-SUMMARY:Work
-UID:16f7fe04-996a-42a9-b67b-13becf8bdc23@16f7.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
-DTEND:20220309T095400Z
-LOCATION:anywhere
-DTSTART:20220309T094900Z
-SUMMARY:The Self-Compassion Pause
-UID:e8120a98-c7a9-413a-9da7-bbb9b5d31abd@e812.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220309T120900Z
-LOCATION:anywhere
-DTSTART:20220309T115400Z
-SUMMARY:The Body Scan
-UID:2a3a31d1-82ed-4bc0-bb21-2398997893d0@2a3a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-06-2022/event/39005B7EE9D3A62A
-DTEND:20220307T063000Z
-LOCATION:502 ksdjfk
-DTSTART:20220307T033000Z
-SUMMARY:laugh factory 2
-UID:8dcb9d2e-7507-4def-a781-54f13bfc4bd2@8dcb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Prep 426 Demo
-DTEND:20220310T020000Z
-LOCATION:Home
-DTSTART:20220309T230000Z
-SUMMARY:Studying
-UID:b35fec00-5928-41dd-907f-1038c6429dbe@b35f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Face a window \n2.Look outside - avoid labeling objects by conventional names\, instead notice colors/patterns \n3.Take note of the Shapes and segment the view \n4.Be observant not critical \n5.If distracted\, gently refocus on viewing shapes/patterns
-DTEND:20220324T055247Z
-LOCATION:anywhere
-DTSTART:20220324T054247Z
-SUMMARY:Mindful Seeing
-UID:f8e957f1-8f74-4d60-a348-dfc45fe72b03@f8e9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Leftovers!
-DTEND:20220307T203000Z
-LOCATION:Innevation Center
-DTSTART:20220307T160000Z
-SUMMARY:Work
-UID:1dab4308-a0af-4c2d-9630-a96c27b9aaa0@1dab.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:AS5 due one week after break
-DTEND:20220309T221500Z
-LOCATION:New Engineering Building
-DTSTART:20220309T210000Z
-SUMMARY:CS 381 Lab
-UID:375a9924-3055-47fb-b925-a19d0535aa4a@375a.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220331T184500Z
-LOCATION:Location
-DTSTART:20220331T173000Z
-SUMMARY:CS 426
-UID:966fb7b8-8515-41dd-a094-eea92def03de@966f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220328T211500Z
-LOCATION:AB 107
-DTSTART:20220328T200000Z
-SUMMARY:CS 445
-UID:bf2c491e-9f94-4cf0-a4e4-eb15e6fb82bd@bf2c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:zzzz
-DTEND:20220224T003000Z
-LOCATION:Bedroom
-DTSTART:20220223T223000Z
-SUMMARY:Sleeping
-UID:aaed496b-57fe-41d6-b0eb-c53a87cca8bc@aaed.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Bring extra water
-DTEND:20220303T210000Z
-LOCATION:Buddist Temple Midtown
-DTSTART:20220303T200000Z
-SUMMARY:Yoga
-UID:f8f8603a-e401-4c55-8c4f-b3dc2cb30354@f8f8.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Don't Forget to submit project
-DTEND:20220329T184500Z
-LOCATION:Zoom
-DTSTART:20220329T173000Z
-SUMMARY:Class Presentation
-UID:e502605c-494d-4047-8e2e-cbe521e549f3@e502.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220401T180000Z
-LOCATION:Remote
-DTSTART:20220401T140000Z
-SUMMARY:Work
-UID:ff38280d-7b66-40ac-b0c9-5bd90475c277@ff38.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
-DTEND:20220309T113900Z
-LOCATION:anywhere
-DTSTART:20220309T113400Z
-SUMMARY:The Self-Compassion Pause
-UID:43d2f9fc-22b6-46bb-a160-6786726777a9@43d2.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-04-02-2022/event/39005B7EEA0DA66A
-DTEND:20220403T053000Z
-LOCATION:407 N Virginia St
-DTSTART:20220403T023000Z
-SUMMARY:Laugh Factory
-UID:b8f183d4-4b7e-440f-81b0-fe0f1cee8f7c@b8f1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220309T123900Z
-LOCATION:anywhere
-DTSTART:20220309T122400Z
-SUMMARY:The Body Scan
-UID:00668dec-a9b3-41d5-8b3d-2fd2afb942d3@0066.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220407T000000Z
-LOCATION:Location
-DTSTART:20220406T220000Z
-SUMMARY:Work
-UID:728c23cd-019a-48a6-94cd-b1ffd88dddac@728c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Daniel out sick
-DTEND:20220302T233000Z
-LOCATION:Innevation Center
-DTSTART:20220302T160000Z
-SUMMARY:Work
-UID:d3bae057-4ab0-4382-aa43-931a5b0f5b9f@d3ba.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
-DTEND:20220309T074900Z
-LOCATION:anywhere
-DTSTART:20220309T074400Z
-SUMMARY:The Self-Compassion Pause
-UID:dc40bab7-f8bd-4c16-b2f9-cb22cc33ae8c@dc40.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Clone Group
-DTEND:20220315T050000Z
-LOCATION:Zoom
-DTSTART:20220315T010000Z
-SUMMARY:D&D Chace's Session
-UID:6032d09a-8fee-412b-8303-fd9daf3c8397@6032.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220329T164500Z
-LOCATION:anywhere
-DTSTART:20220329T161500Z
-SUMMARY:The Body Scan
-UID:956e7891-15cd-4630-829d-ef8b592b52fd@956e.org
-END:VEVENT
-BEGIN:VEVENT
 DESCRIPTION:sdfaf
 DTEND:20220324T223400Z
 LOCATION:Nowhere
 DTSTART:20220324T213400Z
 SUMMARY:Big event name
-UID:47efb6a0-1830-4295-a437-63924e705f8b@47ef.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220408T004500Z
-LOCATION:Location
-DTSTART:20220407T220000Z
-SUMMARY:CS 453
-UID:de658554-6ae5-43ff-b113-b445b7411c1b@de65.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Hello
-DTEND:20220313T050000Z
-LOCATION:Workplace
-DTSTART:20220313T030000Z
-SUMMARY:Work
-UID:b9e35275-d097-41f2-b6c8-889818e89476@b9e3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Wake up on time
-DTEND:20220303T194500Z
-LOCATION:New Engineering Building
-DTSTART:20220303T183000Z
-SUMMARY:CS 426
-UID:775c4484-032d-4f5b-bc00-2b85bc316ac6@775c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Quizz
-DTEND:20220330T211500Z
-LOCATION:Location
-DTSTART:20220330T200000Z
-SUMMARY:CS 445
-UID:18793be4-2e24-4bd5-be9b-36c497b9ee32@1879.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220329T043000Z
-LOCATION:Location
-DTSTART:20220329T040000Z
-SUMMARY:Presentation Test
-UID:1294fe84-fb32-40f2-a832-e65554059570@1294.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:This is a note about Vibing
-DTEND:20220211T023000Z
-LOCATION:PSAC
-DTSTART:20220210T223000Z
-SUMMARY:Vibing
-UID:6cd47e42-15bb-4edf-b899-27353c8c2047@6cd4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220404T211500Z
-LOCATION:Location
-DTSTART:20220404T200000Z
-SUMMARY:CS 445
-UID:ca80be02-ded3-4177-b38f-27afb2f52f1a@ca80.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220406T211500Z
-LOCATION:Location
-DTSTART:20220406T200000Z
-SUMMARY:CS 445
-UID:b19fea4b-ad2e-4191-91b8-49e055650e26@b19f.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:No Notes
-DTEND:20220322T040000Z
-LOCATION:Innevation Center
-DTSTART:20220322T020000Z
-SUMMARY:Leisure Event
-UID:62336d44-4a0f-41fc-8d94-f224b9d3143b@6233.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \\n2.Lay still/move with awareness \\n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220302T021500Z
-LOCATION:Anywhere
-DTSTART:20220302T020000Z
-SUMMARY:The Body Scan
-UID:7462f9c1-b8b6-423a-97df-c891fb3a916f@7462.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Focus 453
-DTEND:20220309T030000Z
-LOCATION:Knowledge Center
-DTSTART:20220308T230000Z
-SUMMARY:Studying
-UID:0ea39c24-1892-4a23-8619-dd26545013d0@0ea3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220401T030000Z
-LOCATION:Location
-DTSTART:20220401T010000Z
-SUMMARY:Homework
-UID:dad92dc8-7539-4614-8e6f-b52250752076@dad9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220329T000000Z
-LOCATION:Location
-DTSTART:20220328T230000Z
-SUMMARY:Errands
-UID:beb67fb0-8549-44ec-a2ce-b0996fef0145@beb6.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220310T210000Z
-LOCATION:anywhere
-DTSTART:20220310T204500Z
-SUMMARY:The Body Scan
-UID:652e600f-507a-462e-9385-ee840a3d11b9@652e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
-DTEND:20220309T105400Z
-LOCATION:anywhere
-DTSTART:20220309T103900Z
-SUMMARY:The Body Scan
-UID:2dbb7009-74f7-40d8-8dbf-ca79d9c8205d@2dbb.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220407T214500Z
-LOCATION:Location
-DTSTART:20220407T203000Z
-SUMMARY:CS 477
-UID:4be3442b-e0a7-4edd-95c0-395cdf868893@4be3.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Midterm next week
-DTEND:20220304T014500Z
-LOCATION:Laxalt Mining
-DTSTART:20220303T230000Z
-SUMMARY:CS 453
-UID:a796e8ce-a994-4320-89ec-87e96278038c@a796.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:6pm sharp!
-DTEND:20220301T060000Z
-LOCATION:Zoom
-DTSTART:20220301T020000Z
-SUMMARY:D&D Chace's Session
-UID:41d4a0f3-7f3d-4c36-80d8-d7a8c9f458d2@41d4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220406T193000Z
-LOCATION:Location
-DTSTART:20220406T143000Z
-SUMMARY:Work
-UID:605b73b2-968c-452d-a1c5-52fb69346cb3@605b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:https://www.ticketweb.com/event/from-ashes-to-new-fire-virginia-street-brewhouse-tickets/11741695?REFERRAL_ID=tmfeed
-DTEND:20220324T060000Z
-LOCATION:211 N Virginia St
-DTSTART:20220324T030000Z
-SUMMARY:From Ashes To New\, Fire From the Gods\, Blind Channel\, Kingdom Collap\,
-UID:aec4a28d-d2dc-41d8-a3cd-86fc19c5416e@aec4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220323T041600Z
-LOCATION:Location
-DTSTART:20220323T021600Z
-SUMMARY:ergo
-UID:9b58d73a-8128-457e-9918-ee96c63a3b85@9b58.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Notes
-DTEND:20220402T040000Z
-LOCATION:Location
-DTSTART:20220402T010000Z
-SUMMARY:Dinner w Friends
-UID:b4ef9e95-819e-4d64-8fc8-21d5cecf81d2@b4ef.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-24-2022/event/39005B7EE9F8A654
-DTEND:20220325T053000Z
-LOCATION:407 N Virginia St
-DTSTART:20220325T023000Z
-SUMMARY:Laugh Factory
-UID:1df16982-a530-4bbe-85e2-1a6cf27858a9@1df1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Test
-DTEND:20220323T150000Z
-LOCATION:Here
-DTSTART:20220323T140000Z
-SUMMARY:7AM Event
-UID:9f1cc9e4-222e-444c-9a9f-06ff0b1a7a69@9f1c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-10-2022/event/39005B7EE9DAA630
-DTEND:20220311T063000Z
-LOCATION:407 N Virginia St
-DTSTART:20220311T033000Z
-SUMMARY:Laugh Factory
-UID:2f8c1b8f-cd6a-40e1-be48-3ba69e33dbc1@2f8c.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Midterm
-DTEND:20220307T221500Z
-LOCATION:Ansari 110
-DTSTART:20220307T210000Z
-SUMMARY:CS 381
-UID:4fb1bbaa-ce6c-4552-8762-a7dd811bf025@4fb1.org
+UID:854ab40a-acd8-4151-818b-2311a2f52fae@854a.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Bring Nam Flowers
@@ -807,95 +15,191 @@ DTEND:20220312T040000Z
 LOCATION:The Shore
 DTSTART:20220312T020000Z
 SUMMARY:Dinner Date
-UID:c8f6b5fa-75a1-4a8f-86b0-0a1af0545b20@c8f6.org
+UID:494c20dc-aac3-44ac-ba4d-dd81d6871fab@494c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Wake up on time
+DTEND:20220303T194500Z
+LOCATION:New Engineering Building
+DTSTART:20220303T183000Z
+SUMMARY:CS 426
+UID:e63bc193-3194-4c79-8a86-9345eea49137@e63b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220309T105400Z
+LOCATION:anywhere
+DTSTART:20220309T103900Z
+SUMMARY:The Body Scan
+UID:f2e323a5-3b51-4cd2-80a6-969949192f4d@f2e3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Notice 5 things you see \n2.Notice 4 things you feel \n3.Notice 3 things you hear \n4.Notice 2 things you smell \n5.Notice 1 thing you taste
+DTEND:20220309T131900Z
+LOCATION:anywhere
+DTSTART:20220309T131400Z
+SUMMARY:Five Senses Exercise
+UID:2abd8e46-847d-46f1-8f6c-db46cfbe1629@2abd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Prep Encounter
+DTEND:20220314T010000Z
+LOCATION:Michael's Place
+DTSTART:20220313T210000Z
+SUMMARY:D&D Sunday Session
+UID:236ab305-8ad5-40ac-b29e-27e1e060bd55@236a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:AS4 due Wednesday
+DTEND:20220228T221500Z
+LOCATION:Ansari 110
+DTSTART:20220228T210000Z
+SUMMARY:CS 381
+UID:c48a0d50-0a61-4f5d-aa7f-a0ff1d9f19d4@c48a.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Notes
-DTEND:20220405T184500Z
+DTEND:20220329T043000Z
 LOCATION:Location
-DTSTART:20220405T173000Z
-SUMMARY:CS426
-UID:3ff7eee2-2ff2-441d-99c4-a0ec5e051fa4@3ff7.org
+DTSTART:20220329T040000Z
+SUMMARY:Presentation Test
+UID:15c4287a-9c56-451e-afb3-d82c0afefe61@15c4.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Chemical Waste
-DTEND:20220309T203000Z
-LOCATION:Innevation Center
-DTSTART:20220309T160000Z
-SUMMARY:Work
-UID:82e04ff2-c73c-45ef-bb79-12eefae2ef4e@82e0.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:dfsaf
-DTEND:20220324T041500Z
-LOCATION:sdfad
-DTSTART:20220324T031500Z
-SUMMARY:fsdf
-UID:b0b10c62-62f2-422b-8a19-530df77cfe30@b0b1.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:note here
-DTEND:20220226T040200Z
-LOCATION:hell
-DTSTART:20220226T040200Z
-SUMMARY:werwr
-UID:c5e93cfb-1a31-4966-9685-e1af31873ad2@c5e9.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Demo
-DTEND:20220308T020000Z
-LOCATION:Home
-DTSTART:20220308T000000Z
-SUMMARY:Studying
-UID:bd7e94bd-fcf9-426b-9a21-8c35383f29e6@bd7e.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Make sure to take break
-DTEND:20220302T010000Z
-LOCATION:Innevation Center
-DTSTART:20220301T220000Z
-SUMMARY:Work
-UID:e24b111b-a55b-4b29-8f53-43980ec3836f@e24b.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:1.Face a window \\n2.Look outside - avoid labeling objects by conventional names\, instead notice colors/patterns \\n3.Take note of the Shapes and segment the view \\n4.Be observant not critical \\n5.If distracted\, gently refocus on viewing shapes/patterns
-DTEND:20220303T161000Z
+DESCRIPTION:1. Sit comfortably on the floor or chair \\n2.Lay still/move with awareness \\n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220302T021500Z
 LOCATION:Anywhere
-DTSTART:20220303T160000Z
-SUMMARY:Mindful Seeing
-UID:404d2042-4411-42b4-8845-6427396aedd6@404d.org
+DTSTART:20220302T020000Z
+SUMMARY:The Body Scan
+UID:7cb83e1a-a40b-46d9-a9e7-8d23489d7d7c@7cb8.org
 END:VEVENT
 BEGIN:VEVENT
-DESCRIPTION:Kenzie Out
-DTEND:20220305T220000Z
+DESCRIPTION:1.Each participant identifies one thing they are stressed about and one thing they are excited about \n2.Take turns speaking about the events identified in the previous step \n3.Notice how it feels to speak about the positive vs negative experience \n4.Notice how it feels to listen to the positive and negative experiences
+DTEND:20220314T013000Z
+LOCATION:anywhere
+DTSTART:20220314T011500Z
+SUMMARY:Mindful Listening (2+ participants)
+UID:f296c9cb-0d02-4584-ae7c-067139847a34@f296.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Minute 1  - focus on feelings\, thoughts\,sensations \n2.Minute 2 - keeping awareness of breath \n3.Minute 3 - notice the ways in which breathing affects the rest of the body
+DTEND:20220314T054800Z
+LOCATION:anywhere
+DTSTART:20220314T054500Z
+SUMMARY:3-Minute Breathing Space
+UID:51918cd1-3072-4b5b-9158-338c1ea0ae7e@5191.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Meeting for team
+DTEND:20220331T023000Z
+LOCATION:HREL
+DTSTART:20220331T020000Z
+SUMMARY:Meeting
+UID:3ad378b1-2d22-4457-94d0-e935bee8a045@3ad3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Bring lunch
+DTEND:20220305T003000Z
 LOCATION:Innevation Center
-DTSTART:20220305T160000Z
-SUMMARY:Makerthon Shift 1
-UID:b1a4727f-821a-4ce3-bea6-424c2470bfdd@b1a4.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:Clone Atlas
-DTEND:20220308T060000Z
-LOCATION:Zoom
-DTSTART:20220308T020000Z
-SUMMARY:D&D Chace's Session
-UID:dc04c4e4-d52e-49a5-8a73-a6ff3b8269ff@dc04.org
-END:VEVENT
-BEGIN:VEVENT
-DESCRIPTION:https://www.ticketweb.com/event/from-ashes-to-new-fire-virginia-street-brewhouse-tickets/11741695?REFERRAL_ID=tmfeed
-DTEND:20220324T060000Z
-LOCATION:211 N Virginia St
-DTSTART:20220324T030000Z
-SUMMARY:From Ashes To New\, Fire From the Gods\, Blind Channel\, Kingdom Collap\,
-UID:0224bc3c-2b73-44f5-a4ee-9c385f43df27@0224.org
+DTSTART:20220304T160000Z
+SUMMARY:Work
+UID:d1804aa2-ac58-4839-8af8-5dbd6f0590cb@d180.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Notes
-DTEND:20220328T193000Z
-LOCATION:Remote
-DTSTART:20220328T143000Z
+DTEND:20220406T193000Z
+LOCATION:Location
+DTSTART:20220406T143000Z
 SUMMARY:Work
-UID:87137303-8a93-4dac-ac22-b831b83a0f8f@8713.org
+UID:d84ff5fb-86dd-4931-90ec-b7b04cdbece9@d84f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220402T040000Z
+LOCATION:Location
+DTSTART:20220402T010000Z
+SUMMARY:Dinner w Friends
+UID:b52e3e0e-715c-4346-b6f7-becfe9b6c83f@b52e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Midterm
+DTEND:20220307T221500Z
+LOCATION:Ansari 110
+DTSTART:20220307T210000Z
+SUMMARY:CS 381
+UID:7def2b05-c24d-4be6-8e29-11176d5b3b1d@7def.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:No Notes
+DTEND:20220315T000000Z
+LOCATION:Innevation Center
+DTSTART:20220314T150000Z
+SUMMARY:Work
+UID:34480168-1697-454f-94e4-3069b25cdc99@3448.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Ahhhhh
+DTEND:20220310T203000Z
+LOCATION:HREL maybe
+DTSTART:20220310T193000Z
+SUMMARY:PROJECT DEMO
+UID:65bb4fab-f8cc-42e2-823c-9806725dd9b9@65bb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:This is a note about Vibing
+DTEND:20220211T023000Z
+LOCATION:PSAC
+DTSTART:20220210T223000Z
+SUMMARY:Vibing
+UID:a069d371-242e-4bec-bd1e-d04f07ab2319@a069.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220331T170000Z
+LOCATION:Location
+DTSTART:20220331T150000Z
+SUMMARY:Breakfast w Mom
+UID:a300c5d1-2220-4c6d-8ff4-6b6ffc8e788a@a300.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
+DTEND:20220309T080900Z
+LOCATION:anywhere
+DTSTART:20220309T080400Z
+SUMMARY:The Self-Compassion Pause
+UID:caa40512-22c9-404c-a5d8-30ce894d896c@caa4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220407T184500Z
+LOCATION:Location
+DTSTART:20220407T173000Z
+SUMMARY:CS 426
+UID:1e75fbcb-f573-4a88-ab51-776c31f6c237@1e75.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Don't Forget to submit project
+DTEND:20220329T184500Z
+LOCATION:Zoom
+DTSTART:20220329T173000Z
+SUMMARY:Class Presentation
+UID:347c735d-e205-4e53-b2ab-92c3121a3520@347c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Faith will be in hour early
+DTEND:20220306T220000Z
+LOCATION:Innevation Center
+DTSTART:20220306T160000Z
+SUMMARY:Makerthon Shift 2
+UID:a15fc6ac-0703-48de-b370-bf8fd54da072@a15f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-04-02-2022/event/39005B7EEA0DA66A
+DTEND:20220403T053000Z
+LOCATION:407 N Virginia St
+DTSTART:20220403T023000Z
+SUMMARY:Laugh Factory
+UID:6159b4fd-4520-4426-ae6b-8469ba244104@6159.org
 END:VEVENT
 BEGIN:VEVENT
 DESCRIPTION:Notes
@@ -903,6 +207,702 @@ DTEND:20220408T180000Z
 LOCATION:Location
 DTSTART:20220408T140000Z
 SUMMARY:Work
-UID:b3f811f1-4e4d-436c-804d-a13530ea2254@b3f8.org
+UID:50bde603-94dd-4e3b-90f2-bd7ab5859a89@50bd.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Clean back room
+DTEND:20220228T220000Z
+LOCATION:Innevation Center
+DTSTART:20220228T160000Z
+SUMMARY:Work
+UID:3775ed8a-c2c2-4dc6-bfd3-f231f8557e42@3775.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Leftovers!
+DTEND:20220307T203000Z
+LOCATION:Innevation Center
+DTSTART:20220307T160000Z
+SUMMARY:Work
+UID:b4c0155b-582e-48b2-bec9-5a87afafe930@b4c0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Check player sheet with Agglath
+DTEND:20220228T020000Z
+LOCATION:Michael's Place
+DTSTART:20220227T220000Z
+SUMMARY:D&D Sunday Session
+UID:d2a785f4-6a2d-4463-b8b9-ee1a634c81f7@d2a7.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Clone Group
+DTEND:20220315T050000Z
+LOCATION:Zoom
+DTSTART:20220315T010000Z
+SUMMARY:D&D Chace's Session
+UID:af3b425b-4957-464d-97de-2db408a95fc9@af3b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
+DTEND:20220309T082900Z
+LOCATION:anywhere
+DTSTART:20220309T082400Z
+SUMMARY:The Self-Compassion Pause
+UID:c8e53dd9-0f37-4dc1-9959-cda9a8e9d4d0@c8e5.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220404T193000Z
+LOCATION:Remote
+DTSTART:20220404T143000Z
+SUMMARY:Work
+UID:1d004ff8-9aeb-4647-8ea4-76ef7e979779@1d00.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220329T164500Z
+LOCATION:anywhere
+DTSTART:20220329T161500Z
+SUMMARY:The Body Scan
+UID:430a6f50-483c-4492-b9b6-e31ee3c0130a@430a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220405T153000Z
+LOCATION:remote
+DTSTART:20220405T150000Z
+SUMMARY:Research Meeting
+UID:715c32d1-98d9-4604-8c43-8b2096f39a38@715c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:dfsaf
+DTEND:20220324T041500Z
+LOCATION:sdfad
+DTSTART:20220324T031500Z
+SUMMARY:fsdf
+UID:db68cf07-356c-4a3c-b15e-0e951079feda@db68.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Get Butter
+DTEND:20220308T183000Z
+LOCATION:Raleys and Purple Bean
+DTSTART:20220308T160000Z
+SUMMARY:Coffee and Errands w/Nam
+UID:4441d99b-9ced-4a88-8eac-f087ca8e309a@4441.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Daniel out sick
+DTEND:20220302T233000Z
+LOCATION:Innevation Center
+DTSTART:20220302T160000Z
+SUMMARY:Work
+UID:ce3b2e0d-fdb9-4147-babb-481e16b4ee03@ce3b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-10-2022/event/39005B7EE9DAA630
+DTEND:20220311T063000Z
+LOCATION:407 N Virginia St
+DTSTART:20220311T033000Z
+SUMMARY:Laugh Factory
+UID:ff22582d-a1b3-40ff-943d-7c211c133ebb@ff22.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Face a window \n2.Look outside - avoid labeling objects by conventional names\, instead notice colors/patterns \n3.Take note of the Shapes and segment the view \n4.Be observant not critical \n5.If distracted\, gently refocus on viewing shapes/patterns
+DTEND:20220324T052747Z
+LOCATION:anywhere
+DTSTART:20220324T051747Z
+SUMMARY:Mindful Seeing
+UID:68c0a2ae-dbb8-4345-9522-e567d5731240@68c0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220310T210000Z
+LOCATION:anywhere
+DTSTART:20220310T204500Z
+SUMMARY:The Body Scan
+UID:c2002812-3fe2-42dd-9fd5-837dcf317e04@c200.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Chemical Waste
+DTEND:20220309T203000Z
+LOCATION:Innevation Center
+DTSTART:20220309T160000Z
+SUMMARY:Work
+UID:fecfb5da-150e-4472-8a4b-1756dc00870b@fecf.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Bring extra water
+DTEND:20220303T210000Z
+LOCATION:Buddist Temple Midtown
+DTSTART:20220303T200000Z
+SUMMARY:Yoga
+UID:588ed2ae-6177-43ff-ac6d-b5bc6b510e84@588e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Hello
+DTEND:20220313T050000Z
+LOCATION:Workplace
+DTSTART:20220313T030000Z
+SUMMARY:Work
+UID:ce6adb21-a0c0-4568-8c61-450af9f9a4f6@ce6a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220404T211500Z
+LOCATION:Location
+DTSTART:20220404T200000Z
+SUMMARY:CS 445
+UID:ef84e301-55f5-49ba-8505-47a63d630a0c@ef84.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220407T214500Z
+LOCATION:Location
+DTSTART:20220407T203000Z
+SUMMARY:CS 477
+UID:ddbaaa39-0a90-417c-a8d2-eebaadef7bda@ddba.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220329T160100Z
+LOCATION:Remote
+DTSTART:20220329T140000Z
+SUMMARY:Research Meeting
+UID:aa718df1-0443-4c5d-87c7-065e2483f9c3@aa71.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-13-2022/event/39005B7EE9E3A63B
+DTEND:20220314T053000Z
+LOCATION:407 N Virginia St
+DTSTART:20220314T023000Z
+SUMMARY:Laugh Factory
+UID:125207f6-5451-4de5-aa80-8111a48ad509@1252.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Ask about final project
+DTEND:20220308T211500Z
+LOCATION:EJCH
+DTSTART:20220308T200000Z
+SUMMARY:CS 420
+UID:1606c25e-aade-4657-9485-abd2ac25e74b@1606.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Prep 426 Demo
+DTEND:20220310T020000Z
+LOCATION:Home
+DTSTART:20220309T230000Z
+SUMMARY:Studying
+UID:7c052acf-73bd-41a3-83c8-4bc8120c089d@7c05.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
+DTEND:20220324T061247Z
+LOCATION:anywhere
+DTSTART:20220324T060747Z
+SUMMARY:The Self-Compassion Pause
+UID:ee140cac-1db4-4120-81b5-508a229a2110@ee14.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220408T004500Z
+LOCATION:Location
+DTSTART:20220407T220000Z
+SUMMARY:CS 453
+UID:1ff18a32-0736-4e68-a88f-e232a9625d30@1ff1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220309T085900Z
+LOCATION:anywhere
+DTSTART:20220309T084400Z
+SUMMARY:The Body Scan
+UID:9c47831a-edff-4a80-991b-3273af3ffc1b@9c47.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:No Notes
+DTEND:20220322T040000Z
+LOCATION:Innevation Center
+DTSTART:20220322T020000Z
+SUMMARY:Leisure Event
+UID:0c74ab5e-3f23-4860-ba68-5d1144d1ebc6@0c74.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:This is a custom Mindful Event for testing
+DTEND:20220318T233000Z
+LOCATION:House
+DTSTART:20220318T230000Z
+SUMMARY:Custom Mindful Event
+UID:855627ac-4829-48a9-a87c-9f93ae7e307f@8556.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220331T214500Z
+LOCATION:Location
+DTSTART:20220331T203000Z
+SUMMARY:CS 477
+UID:dd5387df-5e19-45e8-a1cb-66b7eae129cb@dd53.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Kenzie Out
+DTEND:20220305T220000Z
+LOCATION:Innevation Center
+DTSTART:20220305T160000Z
+SUMMARY:Makerthon Shift 1
+UID:0d0aaba6-4cd8-4bb5-b052-97b30f3f1026@0d0a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220309T102400Z
+LOCATION:anywhere
+DTSTART:20220309T100900Z
+SUMMARY:The Body Scan
+UID:836dfd61-8bcc-47be-a223-2c4160463335@836d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220329T214500Z
+LOCATION:Location
+DTSTART:20220329T203000Z
+SUMMARY:CS 477
+UID:5f5afa3e-e508-468b-b799-98e260ef36f2@5f5a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Focus 453
+DTEND:20220309T030000Z
+LOCATION:Knowledge Center
+DTSTART:20220308T230000Z
+SUMMARY:Studying
+UID:fc9755e5-660b-475e-bcf5-43b0d9107298@fc97.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-24-2022/event/39005B7EE9F8A654
+DTEND:20220325T053000Z
+LOCATION:407 N Virginia St
+DTSTART:20220325T023000Z
+SUMMARY:Laugh Factory
+UID:a01d3c90-9bbb-4af9-ac5f-fb5d1affaa5a@a01d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:https://www.ticketmaster.com/laugh-factory-reno-nevada-03-06-2022/event/39005B7EE9D3A62A
+DTEND:20220307T063000Z
+LOCATION:502 ksdjfk
+DTSTART:20220307T033000Z
+SUMMARY:laugh factory 2
+UID:fbded77b-1ba2-4b54-8f6e-a576b27f6b39@fbde.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Don't bring up politics
+DTEND:20220316T020000Z
+LOCATION:Parent's House
+DTSTART:20220316T000000Z
+SUMMARY:Dinner w/Parents
+UID:b253c3f7-10b1-454c-8f44-4d0a1239a545@b253.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220309T123900Z
+LOCATION:anywhere
+DTSTART:20220309T122400Z
+SUMMARY:The Body Scan
+UID:10bbea2e-c937-4caa-9e7e-1b8b4854078c@10bb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:This is a Note about running
+DTEND:20220222T003000Z
+LOCATION:Football Field
+DTSTART:20220221T223000Z
+SUMMARY:Running
+UID:5d82c26e-42af-4317-946e-d58b698a74c7@5d82.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220324T122300Z
+LOCATION:Home
+DTSTART:20220324T102300Z
+SUMMARY:Tightrpe
+UID:49fce166-b0b9-4ef0-bf72-2d44967c1338@49fc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Yaawn
+DTEND:20220326T033000Z
+LOCATION:Japan
+DTSTART:20220326T013000Z
+SUMMARY:Skating again
+UID:42c388c8-d19b-49e1-bba7-d9eb554c6f50@42c3.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Lower Back
+DTEND:20220310T040000Z
+LOCATION:Home
+DTSTART:20220310T030000Z
+SUMMARY:Stretching
+UID:2a0d3744-cf26-4914-864c-546f91c1347d@2a0d.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Quizz
+DTEND:20220330T211500Z
+LOCATION:Location
+DTSTART:20220330T200000Z
+SUMMARY:CS 445
+UID:02ebd568-9caa-4b58-86e9-df289473a659@02eb.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Notice 5 things you see \n2.Notice 4 things you feel \n3.Notice 3 things you hear \n4.Notice 2 things you smell \n5.Notice 1 thing you taste
+DTEND:20220309T125900Z
+LOCATION:anywhere
+DTSTART:20220309T125400Z
+SUMMARY:Five Senses Exercise
+UID:d8ed213d-3e0d-4068-bf5d-7ac3cdb74e1e@d8ed.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220406T211500Z
+LOCATION:Location
+DTSTART:20220406T200000Z
+SUMMARY:CS 445
+UID:23aa4d95-b6d2-48e2-849e-14e9e863de97@23aa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220405T214500Z
+LOCATION:Location
+DTSTART:20220405T203000Z
+SUMMARY:CS 477
+UID:cd3a41af-819f-4620-a379-d7c35f53e395@cd3a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Test
+DTEND:20220323T150000Z
+LOCATION:Here
+DTSTART:20220323T140000Z
+SUMMARY:7AM Event
+UID:3a2ea216-f291-4c94-a7ff-406cb9b05116@3a2e.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Yaawn
+DTEND:20220326T003000Z
+LOCATION:Japan
+DTSTART:20220325T223000Z
+SUMMARY:Skating again
+UID:412c7ba2-cd02-48b4-916a-4c6d98dc523d@412c.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
+DTEND:20220309T113900Z
+LOCATION:anywhere
+DTSTART:20220309T113400Z
+SUMMARY:The Self-Compassion Pause
+UID:c5c4d04b-61e5-4b18-b2f3-66041928a0b9@c5c4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:go to the store
+DTEND:20220311T024600Z
+LOCATION:reno
+DTSTART:20220311T004600Z
+SUMMARY:Shopping
+UID:c0b8ab4b-955d-49e1-977b-53eace79afab@c0b8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:note here
+DTEND:20220226T040200Z
+LOCATION:hell
+DTSTART:20220226T040200Z
+SUMMARY:werwr
+UID:d8ce5229-d93b-46e5-9cad-aacd80cded89@d8ce.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220330T193000Z
+LOCATION:Location
+DTSTART:20220330T143000Z
+SUMMARY:Meeting
+UID:b5d4e858-0827-4c57-a5e4-868fa1ec029d@b5d4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220331T184500Z
+LOCATION:Location
+DTSTART:20220331T173000Z
+SUMMARY:CS 426
+UID:a1ad9e39-3f5e-45db-be27-6786f6ed1228@a1ad.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
+DTEND:20220309T095400Z
+LOCATION:anywhere
+DTSTART:20220309T094900Z
+SUMMARY:The Self-Compassion Pause
+UID:16d217bd-edf2-468b-924a-2557f059a848@16d2.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220331T000000Z
+LOCATION:Remote
+DTSTART:20220330T220000Z
+SUMMARY:Work
+UID:8023f745-afcb-4588-a55e-b42c494d5db6@8023.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Walking with friends
+DTEND:20220327T203000Z
+LOCATION:Riverwalk District
+DTSTART:20220327T170000Z
+SUMMARY:River Walk
+UID:7d11df3f-a610-4e2d-9d5a-f08c07dcaaff@7d11.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220328T193000Z
+LOCATION:Remote
+DTSTART:20220328T143000Z
+SUMMARY:Work
+UID:0459db61-d693-4a6b-ab5f-4ceed1bf8676@0459.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Put a hand on your chest/give yourself a hug & breath \n2.Acknowledge the emotion as ‘suffering’ without being consumed by the emotion but rather give yourself permission to feel it \n3.Vocalize (variation of): \n“This is suffering” \n“Suffering is part of being human” \nOffer compassion to yourself - “I am enough”
+DTEND:20220309T074900Z
+LOCATION:anywhere
+DTSTART:20220309T074400Z
+SUMMARY:The Self-Compassion Pause
+UID:1e585d46-50c7-4ef1-ba6b-fc03effd75e5@1e58.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220401T230000Z
+LOCATION:Location
+DTSTART:20220401T190000Z
+SUMMARY:Work
+UID:8724ad63-fa50-44c8-891b-113ddcd4def9@8724.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Notice 5 things you see \n2.Notice 4 things you feel \n3.Notice 3 things you hear \n4.Notice 2 things you smell \n5.Notice 1 thing you taste
+DTEND:20220309T133900Z
+LOCATION:anywhere
+DTSTART:20220309T133400Z
+SUMMARY:Five Senses Exercise
+UID:dd447f33-8096-4273-a1e5-36ddd7ab9939@dd44.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:P3 due Thursday
+DTEND:20220301T194500Z
+LOCATION:New Engineering Building
+DTSTART:20220301T183000Z
+SUMMARY:CS 426
+UID:b3e1dc6c-85c1-457c-ba58-71180bf88609@b3e1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220309T120900Z
+LOCATION:anywhere
+DTSTART:20220309T115400Z
+SUMMARY:The Body Scan
+UID:8161c52f-3006-47b0-9691-6f207c6d4372@8161.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Clone Atlas
+DTEND:20220308T060000Z
+LOCATION:Zoom
+DTSTART:20220308T020000Z
+SUMMARY:D&D Chace's Session
+UID:a7b07f27-08a2-493d-9499-f776a1129b6e@a7b0.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:This is a note about studying
+DTEND:20220209T023000Z
+LOCATION:Delmare
+DTSTART:20220208T223000Z
+SUMMARY:Studying
+UID:b40743e1-9c93-4ec7-8518-d3cc62532cf9@b407.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220314T061800Z
+LOCATION:anywhere
+DTSTART:20220314T060300Z
+SUMMARY:The Body Scan
+UID:4b87bc13-71d4-4fbf-9c08-61f41305fcb0@4b87.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Left Shark
+DTEND:20220302T204600Z
+LOCATION:School
+DTSTART:20220302T204600Z
+SUMMARY:Dancing Robots
+UID:dc8a29da-a19b-4be2-8c2e-0fdb5c87380a@dc8a.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220401T180000Z
+LOCATION:Remote
+DTSTART:20220401T140000Z
+SUMMARY:Work
+UID:15faa7d7-dc5a-4568-8593-e6b18902fc4a@15fa.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220328T211500Z
+LOCATION:AB 107
+DTSTART:20220328T200000Z
+SUMMARY:CS 445
+UID:7e5bcf08-1e49-414e-82a3-717bd25e9969@7e5b.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:https://www.ticketweb.com/event/from-ashes-to-new-fire-virginia-street-brewhouse-tickets/11741695?REFERRAL_ID=tmfeed
+DTEND:20220324T060000Z
+LOCATION:211 N Virginia St
+DTSTART:20220324T030000Z
+SUMMARY:From Ashes To New\, Fire From the Gods\, Blind Channel\, Kingdom Collap\,
+UID:0cfc8121-9cc9-4755-96e5-f269e8849f87@0cfc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:This is a test!!
+DTEND:20220223T220000Z
+LOCATION:Field
+DTSTART:20220223T190000Z
+SUMMARY:Walkings
+UID:f07fa096-4751-4be2-8654-989d933f9230@f07f.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220401T004500Z
+LOCATION:Location
+DTSTART:20220331T220000Z
+SUMMARY:CS 453
+UID:f5790c0e-d5ec-4b1b-8d54-4cb285674f8b@f579.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220329T000000Z
+LOCATION:Location
+DTSTART:20220328T230000Z
+SUMMARY:Errands
+UID:9465ae5f-4eab-4d8f-88b6-1b0a48e59b8b@9465.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220405T184500Z
+LOCATION:Location
+DTSTART:20220405T173000Z
+SUMMARY:CS426
+UID:87f991c4-434a-4e17-8b79-b112150208fe@87f9.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:6pm sharp!
+DTEND:20220301T060000Z
+LOCATION:Zoom
+DTSTART:20220301T020000Z
+SUMMARY:D&D Chace's Session
+UID:d382aee4-cb91-4e22-a85d-62e87668ef12@d382.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220323T041600Z
+LOCATION:Location
+DTSTART:20220323T021600Z
+SUMMARY:ergo
+UID:b630a73d-888b-45bf-ac37-d354fdd00466@b630.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220401T030000Z
+LOCATION:Location
+DTSTART:20220401T010000Z
+SUMMARY:Homework
+UID:7df187a5-08f2-4682-a7d2-b7eda46d8964@7df1.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1. Sit comfortably on the floor or chair \n2.Lay still/move with awareness \n3. Start at the toes of both feet to the top of the head - notice breathing patterns/ be aware of the weight of each portion of the scan.
+DTEND:20220330T022215Z
+LOCATION:anywhere
+DTSTART:20220330T015215Z
+SUMMARY:The Body Scan
+UID:85d86e6b-cbaf-49ce-b417-b0c216a150f5@85d8.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Notes
+DTEND:20220407T000000Z
+LOCATION:Location
+DTSTART:20220406T220000Z
+SUMMARY:Work
+UID:4b81576b-77c0-4bc7-a754-cd6389e2302e@4b81.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Make sure to take break
+DTEND:20220302T010000Z
+LOCATION:Innevation Center
+DTSTART:20220301T220000Z
+SUMMARY:Work
+UID:8bdc64c6-630a-4012-ae6b-28ef92ad1f38@8bdc.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Demo
+DTEND:20220308T020000Z
+LOCATION:Home
+DTSTART:20220308T000000Z
+SUMMARY:Studying
+UID:917675b4-9a53-43d2-92a8-5300aa4deb61@9176.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:AS5 due one week after break
+DTEND:20220309T221500Z
+LOCATION:New Engineering Building
+DTSTART:20220309T210000Z
+SUMMARY:CS 381 Lab
+UID:cd82945f-21c7-437d-838f-a4910fa8c185@cd82.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Ask Bryan about debugger
+DTEND:20220302T221500Z
+LOCATION:New Engineering Building
+DTSTART:20220302T210000Z
+SUMMARY:CS 381
+UID:a452a2d9-68e0-4886-840d-00109e30d301@a452.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Face a window \n2.Look outside - avoid labeling objects by conventional names\, instead notice colors/patterns \n3.Take note of the Shapes and segment the view \n4.Be observant not critical \n5.If distracted\, gently refocus on viewing shapes/patterns
+DTEND:20220324T055247Z
+LOCATION:anywhere
+DTSTART:20220324T054247Z
+SUMMARY:Mindful Seeing
+UID:583551d5-65b9-4c0e-a541-f07117edade0@5835.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:https://www.ticketweb.com/event/from-ashes-to-new-fire-virginia-street-brewhouse-tickets/11741695?REFERRAL_ID=tmfeed
+DTEND:20220324T060000Z
+LOCATION:211 N Virginia St
+DTSTART:20220324T030000Z
+SUMMARY:From Ashes To New\, Fire From the Gods\, Blind Channel\, Kingdom Collap\,
+UID:b1a459e9-4dca-4089-9a6d-3b3f7f0cc806@b1a4.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Midterm next week
+DTEND:20220304T014500Z
+LOCATION:Laxalt Mining
+DTSTART:20220303T230000Z
+SUMMARY:CS 453
+UID:e6859c53-27f6-46fb-b274-a7059bdaea78@e685.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:zzzz
+DTEND:20220224T003000Z
+LOCATION:Bedroom
+DTSTART:20220223T223000Z
+SUMMARY:Sleeping
+UID:b6150d80-ff9d-4eef-9580-f7d472b4f90a@b615.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:MIDTERM
+DTEND:20220311T014500Z
+LOCATION:Laxalt Mining
+DTSTART:20220310T230000Z
+SUMMARY:CS 453
+UID:a7895777-01bb-45a6-b194-790ae533f5ef@a789.org
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:1.Face a window \\n2.Look outside - avoid labeling objects by conventional names\, instead notice colors/patterns \\n3.Take note of the Shapes and segment the view \\n4.Be observant not critical \\n5.If distracted\, gently refocus on viewing shapes/patterns
+DTEND:20220303T161000Z
+LOCATION:Anywhere
+DTSTART:20220303T160000Z
+SUMMARY:Mindful Seeing
+UID:f9ac3cd3-cb07-4954-ba55-3cc5615e16b2@f9ac.org
 END:VEVENT
 END:VCALENDAR
