@@ -8,6 +8,7 @@ from django.http.response import HttpResponse
 from ics import Calendar, Event
 import json
 import os
+import pytz
 
 from eventApp.models import Events
 from eventApp.serializers import EventsSerializer
@@ -282,8 +283,9 @@ def ics(request, useremail=""):
         for event in events_serializer.data:
             e = Event()
             e.name = event["EventName"]
-            e.begin = event["StartDate"][:-1]
-            e.end = event["EndDate"][:-1]
+            tz = pytz.timezone("US/Pacific")
+            e.begin = tz.localize(datetime.datetime.strptime(event["StartDate"], "%Y-%m-%dT%H:%M:%SZ"), is_dst=None)
+            e.end = tz.localize(datetime.datetime.strptime(event["EndDate"], "%Y-%m-%dT%H:%M:%SZ"), is_dst=None)
             e.description = event["Notes"]
             e.location = event["Location"]
             calendar.events.add(e)
@@ -302,4 +304,8 @@ def ics(request, useremail=""):
         response['Content-Disposition'] = "attachment; filename=%s" % filename
         return response
     if request.method=='POST':
+        #I have to wait to develop this section until the front end is sending the file back I think...
+        c = request.files['file']
+        for e in c:
+            print(e)
         return
