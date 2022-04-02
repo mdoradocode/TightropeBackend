@@ -26,6 +26,7 @@ from eventApp.models import Streaks
 from eventApp.serializers import StreaksSerializer
 from eventApp.streaks import streakEvents
 
+
 # Create your views here.
 # At the moment this code will return all events, i will work on it later in order to make it return objects based on the UserID
 @csrf_exempt
@@ -305,7 +306,6 @@ def ics(request, useremail=""):
         return response
     
     if request.method=='POST':
-        #I have to wait to develop this section until the front end is sending the file back I think...
         data = request.FILES['calendar']
         string = ""
         for line in data:
@@ -334,3 +334,32 @@ def ics(request, useremail=""):
                 return JsonResponse("Operation Failed. Please Try Again.", safe=False)
 
         return JsonResponse("Added Calendar!", safe=False)
+    
+    if request.method == 'PUT':
+        events_data = JSONParser().parse(request)
+        event=Events.objects.filter(EventID=events_data['EventID'])
+        event_serialized = EventsSerializer(event, many=True)
+        calendar = Calendar()
+        for event in event_serialized.data:
+            print(event)
+            e = Event()
+            e.name = event["EventName"]
+            tz = pytz.timezone("US/Pacific")
+            e.begin = tz.localize(datetime.datetime.strptime(event["StartDate"], "%Y-%m-%dT%H:%M:%SZ"), is_dst=None)
+            e.end = tz.localize(datetime.datetime.strptime(event["EndDate"], "%Y-%m-%dT%H:%M:%SZ"), is_dst=None)
+            e.description = event["Notes"]
+            e.location = event["Location"]
+            calendar.events.add(e)
+            calendar.events
+        filename = event["EventName"].replace(" ", "") + ".ics"
+        filepath = "static/ics/" + filename
+        if os.path.exists(filepath):
+            os.remove(filepath)
+        f = open(filepath, 'w')
+        f.write(str(calendar))
+        f.close()
+        file = "/static/ics/"
+        fl = open(filepath, 'r')
+        response = HttpResponse(fl, content_type=ics)
+        response['Content-Disposition'] = "attachment; filename=%s" % filename
+        return response
