@@ -224,7 +224,7 @@ def streaks(request,useremail=""):
         #Next three lines are for debugging what records are in the database, can be commented out and gotten rid of as needed
         allUserData = Streaks.objects.all()
         allUserData_serializer = StreaksSerializer(allUserData,many=True)
-        print("All Users in DB: ", allUserData_serializer.data)
+        #print("All Users in DB: ", allUserData_serializer.data)
         
         #Grab and serialize all the data for the user
         user_streaks = Streaks.objects.filter(UserEmail = useremail)
@@ -250,7 +250,7 @@ def streaks(request,useremail=""):
         #Serialize the and save the data
         streaks_serializer = StreaksSerializer(data=streaks_data)
         streaks_serializer.is_valid()
-        print(streaks_serializer.errors)
+        #print(streaks_serializer.errors)
         if streaks_serializer.is_valid():
             streaks_serializer.save()
             return JsonResponse("Added User!", safe=False)
@@ -271,9 +271,16 @@ def streaks(request,useremail=""):
 
     #Delete a record based on the UserID that will be passed in the place of useremail
     elif request.method=='DELETE':
-        data=Streaks.objects.filter(UserID=useremail) #Useremail = UserID in this call
-        data.delete()
-        return JsonResponse("Deleted Sucessfully!",safe=False)
+        streaks_data=Streaks.objects.get(UserID=useremail) #Useremail = UserID in this call
+        #data.delete()
+        #print(streaks_data.StreakCount)
+        #print(streaks_data.LifetimeScheduledMindful)
+        streaks_data.StreakCount = 0
+        streaks_data.LifetimeScheduledMindful = 0
+        #print(streaks_data.StreakCount)
+        #print(streaks_data.LifetimeScheduledMindful)
+        streaks_data.save()
+        return JsonResponse("Reset Streaks Sucessfully!",safe=False)
 
 @csrf_exempt
 def ics(request, useremail=""):

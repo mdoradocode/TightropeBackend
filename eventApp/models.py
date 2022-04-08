@@ -36,3 +36,4 @@ class Streaks(models.Model):
     UserEmail = models.CharField(max_length=100,unique=True)
     StreakCount = models.IntegerField()
     LastLogin = models.DateTimeField()
+    LifetimeScheduledMindful = models.IntegerField(default=0)

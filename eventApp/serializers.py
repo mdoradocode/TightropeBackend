@@ -44,4 +44,5 @@ class StreaksSerializer(serializers.ModelSerializer):
         fields = ('UserID',
                     'UserEmail',
                     'StreakCount',
-                    'LastLogin')
+                    'LastLogin',
+                    'LifetimeScheduledMindful')
