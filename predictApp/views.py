@@ -73,10 +73,11 @@ def stress_counter_view(request, useremail=""):
 
 @csrf_exempt
 def local_event_recommendations(request, useremail=""):
-    if request.method=="GET":
+    if request.method=="POST":
+        location = JSONParser().parse(request)
         events = Events.objects.filter(UserEmail=useremail)
         events_serializer = EventsSerializer(events, many=True)
-        local_events = ticketed_recommendation_finder(events_serializer.data)
+        local_events = ticketed_recommendation_finder(events_serializer.data, city=location['city'], state=location['state'])
         return JsonResponse(local_events, safe=False)
 
 @csrf_exempt

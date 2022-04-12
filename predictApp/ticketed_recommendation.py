@@ -28,7 +28,7 @@ END_TIME_ID = 'EndDate'
 TIME_THRESHOLD = datetime.timedelta(hours=1)
 
 
-def ticketed_recommendation_finder(calendar, categories = ""):
+def ticketed_recommendation_finder(calendar, categories = "", city = "Reno", state = "NV"):
     #   only keep events that are in the next week
     currentDate = datetime.datetime.now().date()
     day_array = []
@@ -51,7 +51,7 @@ def ticketed_recommendation_finder(calendar, categories = ""):
     recommended_events = []
     for end_time in final_events:
         end_of_search = datetime.datetime.combine(end_time.date()+datetime.timedelta(days=1), datetime.time(hour=4, minute=59, second=59))
-        events = predictApp.webscraper.find_events(categories = categories, startDate = end_time, endDate=end_of_search)
+        events = predictApp.webscraper.find_events(city = city, state_code = state, categories = categories, startDate = end_time, endDate=end_of_search)
         for event in events:
             if event["StartDate"] >= end_time + TIME_THRESHOLD:
                 recommended_events.append(event)

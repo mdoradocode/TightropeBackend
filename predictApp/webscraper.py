@@ -32,7 +32,7 @@ from datetime import timedelta
 TICKETMASTER_API_KEY = 'dpffBCJurjKsU2MGMshICDYFMXLEbl9d'
 TICKETMASTER_SECRET_KEY='16OzXMilxrP3uyIb'
 
-def find_events(categories = '', city='Reno',  startDate = datetime.now().date(), endDate = datetime.now().date() + timedelta(days=7)):
+def find_events(categories = '', city='Reno', state_code = 'NV',  startDate = datetime.now().date(), endDate = datetime.now().date() + timedelta(days=7)):
 
     """
     Usage: find_events(categories = '{categories list}', city='{city name}')
@@ -51,7 +51,8 @@ def find_events(categories = '', city='Reno',  startDate = datetime.now().date()
 
     pages = tm_client.events.find(
         classification_name=categories,
-        city=city,
+        city = city,
+        state_code=state_code,
         start_date_time=startDate,
         end_date_time=endDate
     )
